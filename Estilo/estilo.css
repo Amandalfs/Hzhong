@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 body  {
-    background-color: rgb(223, 169, 255);
+    background: linear-gradient(180deg, #a811ff 0%, #181818 100%);
     color: black;
     font-size: 10pt;
     text-align: center;
@@ -29,9 +29,11 @@ h1 {
 footer {
     background-color: rgb(217, 176, 255);
     text-align: center;
+    border-radius: 10px;
 }
 header {
     background-color: rgb(217, 176, 255);
+    border-radius: 10px;
     
 }
 
@@ -41,7 +43,11 @@ header {
     border: 3px solid rgba(224, 72, 255, 0.233);
     margin: 10px;
     border-radius: 8px;
+    max-height: 260px;
+    min-height: 260px;
 }
  .links a {
     padding: 10px;
+    
  }
+
