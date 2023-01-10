@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 body  {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(223, 169, 255);
     color: black;
     font-size: 10pt;
     text-align: center;
     font-family: 'Lato', sans-serif;
-
+    
 }
 
 div {
@@ -35,3 +35,13 @@ header {
     
 }
 
+.post {
+    background-color: rgb(255, 255, 255);
+    padding: 110px;
+    border: 3px solid rgba(224, 72, 255, 0.233);
+    margin: 10px;
+    border-radius: 8px;
+}
+ .links a {
+    padding: 10px;
+ }
