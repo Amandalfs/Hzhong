@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body  {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-size: 10pt;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+
+}
+
+div {
+    font-size: 16pt;
+}
+
+input, button {
+    border-radius: 5px;
+}
+
+button {
+    font-size: 15pt;
+    padding: 3px;
+}
+
+h1 {
+    text-shadow: 2px;
+}
+
+footer {
+    background-color: rgb(217, 176, 255);
+    text-align: center;
+}
+header {
+    background-color: rgb(217, 176, 255);
+    
+}
+
