@@ -20,7 +20,7 @@
         <p><label for="">Email: <input type="email" name="txtEmail" id="txtEmail"></label></p>
         <p><label for="">Senha: </label> <input type="password" name="inputSenha" id="senha1" minlength="8"></p>
         <p><label for="">Repita Senha: </label><input type="password" name="inputSenha" id="senha2" minlength="8"></p>
-        <p><label for="">CPF: </label> <input type="number" name="" id="" ></p>
+        <p><label for="">CPF: </label> <input type="number" name="numCPF" id="numCPF" maxlength="11" ></p>
         <p><label for="">Data de nascimento: </label> <input type="date" name="nasc" id="nasc"></p>
         <p>Tipo de conta: </p>
         <form action="">
@@ -28,6 +28,7 @@
             <label for="corrente">Corrente</label><input type="radio" name="fav_type" id="fav_corre">
             <label for="universitaria">Universitaia</label><input type="radio" name="fav_type" id="fav_uni">
         </form>
+        
         <br>
         <button onclick="registrar()">Criar Conta</button>
         <hr>

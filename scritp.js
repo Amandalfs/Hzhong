@@ -10,7 +10,19 @@ class ContaBancaria{
     }
 }
 
-const contasHzhong = [];
+const contasHzhong = [
+    {
+        nome: 'Amanda',
+        agencia: 004,
+        numero: 154,
+        tipo: 'ContaCorrente',
+        senha: 'Senha1234',
+        email: 'amanda57@gmail.com',
+        saldo: 0,
+        CPF: '',
+    }   
+];
+
 
 class ContaCorrente extends ContaBancaria{
 
@@ -49,9 +61,26 @@ function registrar(){
 }
 
 function enter(){
-
+    let email = document.getElementById('txtHomeEmail');
+    email = String(email.value);
+    let senha = document.getElementById('txtHomeSenha');
+    senha = String(senha.value);
+    console.log(senha);
+    console.log(email);
+    if(verificarRegister(email, senha, contasHzhong)) {
+        window.location.assign('/pages/menuConta.html');
+    } else {
+        return console.log("errado")
+    }
 }
 
-function verificarRegister(email, nasc){
-
+function verificarRegister(_email, _senha, bancoDeDados){
+    for (el of bancoDeDados) {
+        const {email, senha} = el 
+        if(_email === email && _senha === senha) {
+            return true
+        } else {
+            return false
+        }
+    }   
 }
