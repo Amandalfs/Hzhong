@@ -30,6 +30,7 @@ footer {
     background-color: rgb(217, 176, 255);
     text-align: center;
     border-radius: 10px;
+    font-size: 15pt;
 }
 header {
     background-color: rgb(217, 176, 255);
@@ -43,8 +44,9 @@ header {
     border: 3px solid rgba(224, 72, 255, 0.233);
     margin: 10px;
     border-radius: 8px;
-    max-height: 260px;
-    min-height: 260px;
+    max-height: 350px;
+    min-height: 350px;
+    padding-top: 10px;
 }
  .links a {
     padding: 10px;
