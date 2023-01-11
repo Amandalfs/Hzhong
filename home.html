@@ -20,8 +20,9 @@
             <p>Login</p>
             <p><label for="">Email: </label> <input type="email" name="" id="txtHomeEmail"></p>
             <p><label for="">Senha: <input type="password" name="inputSenha" id="txtHomeSenha"></label></p>
-            <p><button onclick="enter()">Entrar</button></p>
-            <p class="links"><a href="pages/register.html">Registrar conta</a> <a href="/pages/esqueciSenha.html">Esqueci a Senha</a></p>
+            <p><button class="btnLogin">Entrar</button></p>
+            <p class="links"><a href="pages/register.html">Registrar conta</a> <a href="/pages/esqueciSenha.html">Esqueci a Senha</a></p>   
+            <span class="erroLogin">ERRO, Senha ou Email estao inválidos</span>
             <hr>   
         </div>
     </section>
@@ -30,6 +31,6 @@
            <p><a href="">MENU</a></p>
         </div>
     </footer>
-    <script src="scritp.js"></script>
+    <script type="module" src="scrips/login.js"></script>
 </body>
 </html>

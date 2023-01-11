@@ -10,7 +10,7 @@ class ContaBancaria{
     }
 }
 
-const contasHzhong = [
+/* const contasHzhong = [
     {
         nome: 'Amanda',
         agencia: 004,
@@ -21,20 +21,22 @@ const contasHzhong = [
         saldo: 0,
         CPF: '',
     }   
-];
+]; */
 
 
-class ContaCorrente extends ContaBancaria{
-
+/*class ContaCorrente extends ContaBancaria{
+    super(nome, agencia, numero, senha, email, CPF)
 }
 
-class ContaPoupanca extends ContaBancaria{
 
+class ContaPoupanca extends ContaBancaria{
+    super(nome, agencia, numero, senha, email, CPF)
 }
 
 class ContaUniversitaria extends ContaBancaria{
-    
+    super(nome, agencia, numero, senha, email, CPF)
 }
+*/
 
 function tipo(tipo) {
     switch(tipo){
@@ -56,11 +58,11 @@ function registrar(){
     let nome = String(document.getElementById('txtName').value);
     let nasc = Date(document.getElementById('nasc'));
     let tipo;
-    contasHzhong.push(new ContaBancaria(nome, 0123, tipo, contasHzhong.length, senha, email));
+    contasHzhong.push(nome, 0123, tipo, contasHzhong.length, senha, email);
     
 }
 
-function enter(){
+/* function enter(){
     let email = document.getElementById('txtHomeEmail');
     email = String(email.value);
     let senha = document.getElementById('txtHomeSenha');
@@ -83,4 +85,4 @@ function verificarRegister(_email, _senha, bancoDeDados){
             return false
         }
     }   
-}
+} */

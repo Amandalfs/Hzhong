@@ -64,3 +64,9 @@ header {
     background-color: #a811ff;
     border-color: rgb(111, 0, 255);
 }
+
+.erroLogin{
+    display: none;
+    font-size: 8pt;
+    color: red;
+}
