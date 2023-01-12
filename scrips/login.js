@@ -7,10 +7,8 @@ function enter(){
     let senha = document.getElementById('txtHomeSenha');
     senha = String(senha.value);
     if(verificarRegister(email, senha, contasHzhong)) {
+        localStorage.setItem('bank:client', JSON.stringify(contasHzhong[0]));
         window.location.assign('./pages/menuConta.html');
-        // export dadosObj = [{ nome: 'Hugo'}];
-        module.exports = [{nome: 'Hugo'}]
-        console.log('test', 2)
     } else {
         panel.style.display = 'block'
     }

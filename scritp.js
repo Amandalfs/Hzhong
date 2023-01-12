@@ -8,11 +8,38 @@ class ContaBancaria{
         this._saldo = 0;
         this._CPF = CPF;
     }
-}
 
+    get verSaldo() {
+        return this.#saldo;
+    }
+
+    #saldo() {
+        return this._saldo
+    }
+
+    deposit(value) {
+        return this._saldo += value;
+    }
+    
+    saque(value) {
+
+    }
+
+
+const bancoClient = JSON.parse(localStorage.getItem('bank:client'));
 /* const contasHzhong = [
     {
         nome: 'Amanda',
+        agencia: 004,
+        numero: 154,
+        tipo: 'ContaCorrente',
+        senha: '1234',
+        email: 'amanda57@gmail.com',
+        saldo: 0,
+        CPF: '',
+    },
+    {
+        nome: 'Hugo',
         agencia: 004,
         numero: 154,
         tipo: 'ContaCorrente',
@@ -86,3 +113,10 @@ function verificarRegister(_email, _senha, bancoDeDados){
         }
     }   
 } */
+
+
+const teste2 = document.querySelector('.nameClient');
+
+console.log(teste2.innerHTML += `${bancoClient.nome}`);
+
+bancoClient.
