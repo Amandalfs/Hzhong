@@ -59,13 +59,32 @@ header {
     padding-left: 2px;
 }
 
-.acoes {
+.acaoRetirar {
+    padding: 2px;
+    background-color: #a811ff;
+    border-color: rgb(111, 0, 255);
+}
+
+.acaoDepositar {
+    padding: 2px;
+    background-color: #a811ff;
+    border-color: rgb(111, 0, 255);
+}
+
+.acaoExtrato {
     padding: 2px;
     background-color: #a811ff;
     border-color: rgb(111, 0, 255);
 }
 
 .erroLogin{
+    display: none;
+    font-size: 8pt;
+    color: red;
+}
+
+.errorRegister{
+    padding: 2px;
     display: none;
     font-size: 8pt;
     color: red;

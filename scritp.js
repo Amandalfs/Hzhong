@@ -128,4 +128,3 @@ function verificarRegister(_email, _senha, bancoDeDados){
         }
     }   
 } */
-

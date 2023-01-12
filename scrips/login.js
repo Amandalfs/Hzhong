@@ -1,7 +1,7 @@
 import {contasHzhong} from "./test.js";
 
 function enter(){
-    let panel = document.querySelector('span.erroLogin')
+    let errorLogin = document.querySelector('span.erroLogin')
     let email = document.getElementById('txtHomeEmail');
     email = String(email.value);
     let senha = document.getElementById('txtHomeSenha');
@@ -11,7 +11,7 @@ function enter(){
         localStorage.setItem('bank:client', JSON.stringify(newContas));
         window.location.assign('./pages/menuConta.html');
     } else {
-        panel.style.display = 'block'
+        errorLogin.style.display = 'block'
     }
 }
 
@@ -33,7 +33,7 @@ function verificarRegister(_email, _senha, bancoDeDados){
         if(_email === email && _senha === senha) {
             return true
         } else {
-
+           
         }
         
     }   
