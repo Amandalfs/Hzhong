@@ -8,20 +8,27 @@ function enter(){
     senha = String(senha.value);
     if(verificarRegister(email, senha, contasHzhong)) {
         window.location.assign('./pages/menuConta.html');
+        // export dadosObj = [{ nome: 'Hugo'}];
+        module.exports = [{nome: 'Hugo'}]
+        console.log('test', 2)
     } else {
         panel.style.display = 'block'
     }
-    
-    
 }
 
 let btnLogin = document.querySelector('button.btnLogin');
 btnLogin.addEventListener('click', enter)
 
+btnLogin.addEventListener('reload',(e) => {
+    e.preventDefault();
+    
+})
+
+
 function verificarRegister(_email, _senha, bancoDeDados){
-    console.log(bancoDeDados)
-    console.log(_email)
-    console.log(_senha)
+    console.log(bancoDeDados);
+    console.log(_email);
+    console.log(_senha);
     for (let el of bancoDeDados) {
         const {email, senha} = el
         if(_email === email && _senha === senha) {
