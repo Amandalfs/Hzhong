@@ -24,7 +24,7 @@ class ContaBancaria{
     saque(value) {
 
     }
-
+}
 
 
 /* const contasHzhong = [
