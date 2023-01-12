@@ -26,7 +26,7 @@ class ContaBancaria{
     }
 
 
-const bancoClient = JSON.parse(localStorage.getItem('bank:client'));
+
 /* const contasHzhong = [
     {
         nome: 'Amanda',
@@ -47,8 +47,23 @@ const bancoClient = JSON.parse(localStorage.getItem('bank:client'));
         email: 'amanda57@gmail.com',
         saldo: 0,
         CPF: '',
+
     }   
 ]; */
+
+
+/* 
+    Sistema para criar uma conta nova
+    contasHzhong.push({
+        nome: 'Luiz',
+        agencia: '0004',
+        numero: 154,
+        tipo: 'ContaCorrente',
+        senha: '1234',
+        email: 'luiz@gmail.com',
+        saldo: 0,
+        CPF: '',
+}) */
 
 
 /*class ContaCorrente extends ContaBancaria{
@@ -64,8 +79,8 @@ class ContaUniversitaria extends ContaBancaria{
     super(nome, agencia, numero, senha, email, CPF)
 }
 */
-
-function tipo(tipo) {
+/* 
+function verificarTipo(tipo){
     switch(tipo){
         case 0: 
             return tipo="poupanca"
@@ -77,9 +92,9 @@ function tipo(tipo) {
             return tipo="universitaria"
             break;
     }
-}
+} */
 
-function registrar(){
+/* function registrar(){
     let senha = String(document.getElementById('senha1').value);
     let email = String(document.getElementById('txtEmail').value);
     let nome = String(document.getElementById('txtName').value);
@@ -87,7 +102,7 @@ function registrar(){
     let tipo;
     contasHzhong.push(nome, 0123, tipo, contasHzhong.length, senha, email);
     
-}
+} */
 
 /* function enter(){
     let email = document.getElementById('txtHomeEmail');
@@ -114,9 +129,3 @@ function verificarRegister(_email, _senha, bancoDeDados){
     }   
 } */
 
-
-const teste2 = document.querySelector('.nameClient');
-
-console.log(teste2.innerHTML += `${bancoClient.nome}`);
-
-bancoClient.
