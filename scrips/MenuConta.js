@@ -12,3 +12,4 @@ menuSaldo.innerHTML += ` ${bancoClient[1].toLocaleString('pt-br', {style: 'curre
 menuTipo.innerHTML += ` ${bancoClient[2]}`;
 menuNumero.innerHTML += ` ${bancoClient[3]}`;
 menuAgencia.innerHTML += ` ${bancoClient[4]}`;
+

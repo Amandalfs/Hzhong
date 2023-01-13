@@ -124,6 +124,13 @@ header {
     color: red;
 }
 
+.errorSaque {
+    padding: 2px;
+    display: none;
+    font-size: 8pt;
+    color: red;
+}
+
 p {
     padding: 5px;
     margin: 2px;

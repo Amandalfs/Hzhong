@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Saque Conta</title>
+    <link rel="stylesheet" href="/Estilo/estilo.css">
 </head>
 <body>
     <header>
-
+        <h1>Saque</h1>
     </header>
-    <section>
-
+    <section class="post">
+        <h2 class="nameSaque">Bem Vinda(o) </h2>
+        <h3 class="saldoSaque">Saldo: </h3>
+        <p>Quantos voce quer sacar da conta?</p>
+            <p><label for="">Quantidade R$: </label><input type="number" name="txt" class="txtSaqueNumero" id="t"></p>
+            <p><label for="">Senha: </label><input type="password" class="txtSenhaSaque"></p>
+            <button class="btnVfSaque">Saque</button>
+            <div class="Reposta"></div>
+            <span class="errorSaque"></span>
     </section>
     <footer>
-        
+        <p><a href="/home.html">Menu</a></p>
     </footer>
+    <script type="module" src="/scrips/saqueConta.js"></script>
 </body>
 </html>

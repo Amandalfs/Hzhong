@@ -6,7 +6,7 @@ const contasHzhong = [
         tipo: 'ContaCorrente',
         senha: '1234',
         email: 'amanda57@gmail.com',
-        saldo: 0,
+        saldo: 5500,
         CPF: '',
     },
     {
@@ -16,7 +16,7 @@ const contasHzhong = [
         tipo: 'ContaCorrente',
         senha: '1234',
         email: 'luiz@gmail.com',
-        saldo: 0,
+        saldo: 2500,
         CPF: '',
     },
     {
@@ -26,7 +26,7 @@ const contasHzhong = [
         tipo: 'ContaCorrente',
         senha: '1234',
         email: 'vini@gmail.com',
-        saldo: 0,
+        saldo: 500,
         CPF: '',
     }     
 ];
