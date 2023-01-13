@@ -21,6 +21,8 @@ function register() {
     if(verificarNome(nameRegister) && verificarEmailExistente(emailRegister, contasHzhong) && 
     (verificarSenhaRegister(senha1, senha2) && verificarNasc()) && verificarCPF(cpfRegister)){
         criarConta(cpfRegister, emailRegister, nameRegister, senha1)
+        localStorage.setItem('bank:client', JSON.stringify(contasHzhong[contasHzhong.length-1]));
+        window.location.assign('./confirmarEmail.html');
         console.log(contasHzhong)
     }else {
         

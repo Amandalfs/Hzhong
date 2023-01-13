@@ -1,12 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+*{
+    padding: 0;
+    margin: 0;
+}
+
 body  {
     background: linear-gradient(180deg, #a811ff 0%, #181818 100%);
     color: black;
-    font-size: 10pt;
+    font-size: 13pt;
     text-align: center;
     font-family: 'Lato', sans-serif;
+    padding: 5px;
     
+}
+
+br {
+    padding: 5px;
+    margin: 10px;
 }
 
 div {
@@ -22,8 +33,10 @@ button {
     padding: 3px;
 }
 
-h1 {
+h1, h2 {
     text-shadow: 2px;
+    padding: 5px;
+    margin: 5px;
 }
 
 footer {
@@ -35,6 +48,10 @@ footer {
 header {
     background-color: rgb(217, 176, 255);
     border-radius: 10px;
+    padding: 1px;
+    margin: 1px;
+    font-size: 10pt;
+    text-align: center;
     
 }
 
@@ -59,20 +76,37 @@ header {
     padding-left: 2px;
 }
 
+.btnRegister {
+    padding: 4px;
+    margin: 10px;
+    background-color: #a811ff;
+    border-color: rgb(111, 0, 255);
+}
+
 .acaoRetirar {
-    padding: 2px;
+    padding: 4px;
+    margin: 10px;
     background-color: #a811ff;
     border-color: rgb(111, 0, 255);
 }
 
 .acaoDepositar {
-    padding: 2px;
+    padding: 4px;
+    margin: 10px;
     background-color: #a811ff;
     border-color: rgb(111, 0, 255);
 }
 
 .acaoExtrato {
-    padding: 2px;
+    padding: 4px;
+    margin: 10px;
+    background-color: #a811ff;
+    border-color: rgb(111, 0, 255);
+}
+
+.reEnviar {
+    padding: 4px;
+    margin: 10px;
     background-color: #a811ff;
     border-color: rgb(111, 0, 255);
 }
@@ -88,4 +122,10 @@ header {
     display: none;
     font-size: 8pt;
     color: red;
+}
+
+p {
+    padding: 5px;
+    margin: 2px;
+   
 }
