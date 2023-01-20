@@ -19,8 +19,7 @@ function verificarSaque(){
     let txtSaqueNumero = Number(document.querySelector('.txtSaqueNumero').value);
     let txtSenhaSaque = String(document.querySelector('.txtSenhaSaque').value);
     let errorSaque = document.querySelector('.errorSaque');
-    
-    
+    const extractDados = []
     
     if(txtSaqueNumero<bancoClient[1]){
         console.log(saldoTotal);
@@ -29,6 +28,10 @@ function verificarSaque(){
             saldoTotal -= txtSaqueNumero
             post.innerHTML = `<p>Saque de ${txtSaqueNumero.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}</p>`
             saldoSaque.innerHTML = `<h3> Saldo: ${saldoTotal.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}</h3>`;
+            bancoClient[1] = saldoTotal;
+            localStorage.setItem("bank:client", JSON.stringify(bancoClient));
+            extractDados.push(`Voce sacou ${saldoTotal.toLocaleString("pt-br", {style: "currency", currency: "BRL"})}`)
+            localStorage.setItem("extract:client", JSON.stringify(extractDados));
             post.style.display = 'block'
             errorSaque.style.display = 'none';
         } else {
@@ -44,7 +47,7 @@ function verificarSaque(){
 }
 
 
-function dadosFilter(n){
+export function dadosFilter(n){
     for (let el of contasHzhong) {
         const {numero, senha} = el; 
         if(n === numero){
