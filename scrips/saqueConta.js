@@ -13,13 +13,13 @@ nameSaque.innerHTML += `${bancoClient[0]}`
 let saldoSaque = document.querySelector('.saldoSaque');
 saldoSaque.innerHTML += ` ${saldoTotal.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`;
 
+const extractDados = JSON.parse(localStorage.getItem("extract:client"));
 
 function verificarSaque(){
     console.log(bancoClient[1])
     let txtSaqueNumero = Number(document.querySelector('.txtSaqueNumero').value);
     let txtSenhaSaque = String(document.querySelector('.txtSenhaSaque').value);
     let errorSaque = document.querySelector('.errorSaque');
-    const extractDados = []
     
     if(txtSaqueNumero<bancoClient[1]){
         console.log(saldoTotal);
@@ -28,12 +28,21 @@ function verificarSaque(){
             saldoTotal -= txtSaqueNumero
             post.innerHTML = `<p>Saque de ${txtSaqueNumero.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}</p>`
             saldoSaque.innerHTML = `<h3> Saldo: ${saldoTotal.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}</h3>`;
-            bancoClient[1] = saldoTotal;
-            localStorage.setItem("bank:client", JSON.stringify(bancoClient));
-            extractDados.push(`Voce sacou ${saldoTotal.toLocaleString("pt-br", {style: "currency", currency: "BRL"})}`)
-            localStorage.setItem("extract:client", JSON.stringify(extractDados));
+            bancoClient[1] = saldoTotal;   
+            
             post.style.display = 'block'
             errorSaque.style.display = 'none';
+
+            let newDate = new Date();
+            let hours = newDate.getHours();
+            let minutes = newDate.getMinutes();
+            let day = newDate.getDay();
+            let month = newDate.getMonth();
+            let year = newDate.getFullYear();
+
+            localStorage.setItem("bank:client", JSON.stringify(bancoClient));
+            extractDados.push(`Voce sacou ${txtSaqueNumero.toLocaleString("pt-br", {style: "currency", currency: "BRL"})} ${hours}:${minutes} ${day}/${month}/${year}`)
+            localStorage.setItem("extract:client", JSON.stringify(extractDados));
         } else {
             errorSaque.innerHTML = 'Senha Errada ou Saldo Invalido';
             errorSaque.style.display = 'block';
@@ -47,7 +56,7 @@ function verificarSaque(){
 }
 
 
-export function dadosFilter(n){
+function dadosFilter(n){
     for (let el of contasHzhong) {
         const {numero, senha} = el; 
         if(n === numero){
