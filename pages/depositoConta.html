@@ -9,13 +9,23 @@
 </head>
 <body>
     <header>
-
+        <h1><img class="icon" src="/assets/imgs/Icon.png" alt="">Banco Hzhong</h1>
     </header>
     <section class="post">
-
+        <h2 class="nameDeposito">Ola, </h2>
+        <h3 class="saldoDeposito">Saldo: </h3>
+        <p>Quantos Voce quer depositar?</p>
+        <p><label for="">Deposito: </label> <input type="number" class="txtDepositoQuantia" name="depositoClient" id="txtDepositoQuantia"> </p>
+        <p><label for="">Senha:</label> <input type="password" class="txtDepositoSenha" name="senhaClientDeposito" id="txtSenhaDeposito"></p>
+        <button class="btnDepositar">Depositar</button>
+        <div class="respostaDeposito">
+            <p></p>
+        </div>
+        <span class="errorDeposito"></span>
     </section>
     <footer>
-
+        <a href="menuConta.html">Menu</a>
     </footer>
+    <script type="module" src="/scrips/depositoConta.js"></script>
 </body>
 </html>

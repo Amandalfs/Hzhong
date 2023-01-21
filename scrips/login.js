@@ -6,10 +6,20 @@ function enter(){
     email = String(email.value);
     let senha = document.getElementById('txtHomeSenha');
     senha = String(senha.value);
+    const newDate = new Date();
+    let day = newDate.getDay();
+    let year = newDate.getFullYear();
+    let month = newDate.getMonth()+1;
+    let hours = newDate.getHours();
+    let minutes = newDate.getMinutes();
     if(verificarRegister(email, senha, contasHzhong)) {
         const newContas = dadosFilter();
+        console.log(newContas);
+        const dadosExtrato = [`Saldo: ${newContas[1].toLocaleString('pt-br',{style: 'currency', currency:'BRL'})} ${hours}:${minutes} ${day}/${month}/${year} `]
         localStorage.setItem('bank:client', JSON.stringify(newContas));
+        localStorage.setItem('extract:client', JSON.stringify(dadosExtrato));
         window.location.assign('./pages/menuConta.html');
+
     } else {
         errorLogin.style.display = 'block'
     }
