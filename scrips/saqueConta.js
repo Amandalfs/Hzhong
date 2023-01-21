@@ -34,10 +34,10 @@ function verificarSaque(){
             errorSaque.style.display = 'none';
 
             let newDate = new Date();
-            let hours = newDate.getHours();
-            let minutes = newDate.getMinutes();
-            let day = newDate.getDay();
-            let month = newDate.getMonth();
+            let hours = newDate.getHours().toString().padStart(2,0);//testar a meia noite
+            let minutes = newDate.getMinutes().toString().padStart(2,0);//testar a meia noite
+            let day = newDate.getDate().toString().padStart(2,0);
+            let month = (newDate.getMonth()+1).toString().padStart(2,0);
             let year = newDate.getFullYear();
 
             localStorage.setItem("bank:client", JSON.stringify(bancoClient));

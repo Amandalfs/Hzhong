@@ -7,9 +7,9 @@ function enter(){
     let senha = document.getElementById('txtHomeSenha');
     senha = String(senha.value);
     const newDate = new Date();
-    let day = newDate.getDay();
+    let day = newDate.getDate().toString().padStart(2,0);
     let year = newDate.getFullYear();
-    let month = newDate.getMonth()+1;
+    let month = (newDate.getMonth()+1).toString().padStart(2,0);
     let hours = newDate.getHours();
     let minutes = newDate.getMinutes();
     if(verificarRegister(email, senha, contasHzhong)) {

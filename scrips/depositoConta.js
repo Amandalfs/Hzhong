@@ -36,14 +36,14 @@ function Depositar(){
         saldoDeposito.innerHTML += `Saldo" ${bancoClient[1].toLocaleString('pt-br', {style: 'currency', currency:'BRL'})}`;
         
         const newDate = new Date();
-        const hours = newDate.getHours();
-        const minutes = newDate.getMinutes();
-        const day = newDate.getDay();
-        const month = newDate.getMonth()+1;
+        const hours = newDate.getHours().toString().padStart(2,0);
+        const minutes = newDate.getMinutes().toString().padStart(2,0);
+        const day = newDate.getDate().toString().padStart(2,0);
+        const month = (newDate.getMonth()+1).toString().padStart(2,0);
         const year = newDate.getFullYear();
 
         localStorage.setItem("bank:client", JSON.stringify(bancoClient));
-        extractDados.push(`Voce depositou ${saldoTotal.toLocaleString("pt-br", {style: "currency", currency: "BRL"})} ${hours}:${minutes} ${day}/${month}/${year}`)
+        extractDados.push(`Voce depositou ${saldoDeposito.toLocaleString("pt-br", {style: "currency", currency: "BRL"})} ${hours}:${minutes} ${day}/${month}/${year}`)
         localStorage.setItem("extract:client", JSON.stringify(extractDados));
     } else {
         errorDeposito.innerHTML += `Senha Invalida`
