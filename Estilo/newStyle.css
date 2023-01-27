@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+*{
+    padding: 0;
+    margin: 0 auto;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    
+}
+
+body{
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5em;
+}
+
+.container-list ul li {
+    /* border: 2px solid rgb(48, 79, 255); */
+    display: inline-flex;
+    flex-direction: column;
+    margin: 6px 10px 6px 0px;
+}
+
+.container-login{
+    display: inline-block;
+    flex-direction: column;
+    /* border: 1px solid  black; */
+    text-align: justify;
+    float: right;
+}
+
+.container-login img {
+    height: 40px;
+    width: 40px;
+}
+
+.icon{
+    width: 25px;
+    height: 25px;
+    margin-left: 8px;
+}
+
+.container-header {
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(156, 49, 255);
+}
+
+body {
+    background-color: rgb(230, 202, 255);
+}
+
+.container-page {
+    margin: 2px auto;
+    margin-top: 10px;
+    border: 2px solid rgb(162, 0, 255);
+    background-color: rgb(255, 255, 255);
+    height: 600px;
+    width: 1300px;
+    text-align: center;
+    align-items: center;
+    background-image: url(/assets/imgs/background.png);
+}
+
+.container-page-text {
+    font-size: 1em;
+    text-align: left;
+    margin-left: 60px;
+    margin-top: 60px;
+    color: white;
+    text-shadow: 0.1em 0.1em #333
+}
+
+/* .container-page img {
+    width: 1300px;
+    height: 600px;
+    text-align: justify;
+    float: right;
+} */
+
+.container-footer {
+    font-size: 0.8em;
+    margin: 5px;
+    width: 1340px;
+    height: 40px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(156, 49, 255);
+}
+
+.container-footer ul li{
+    display: inline-flex;
+    flex-direction: column;
+    margin: 10px;
+    text-align: justify;
+    float: right;
+}
