@@ -19,7 +19,7 @@ function register() {
     console.log(senha2);
     console.log(cpfRegister); */
     if(verificarNome(nameRegister) && verificarEmailExistente(emailRegister, contasHzhong) && 
-    (verificarSenhaRegister(senha1, senha2) && verificarNasc()) && verificarCPF(cpfRegister)){
+    (verificarSenhaRegister(senha1, senha2) && verificarNasc()) && verificarCPF(cpfRegister) && verifyCpf()){
         criarConta(cpfRegister, emailRegister, nameRegister, senha1)
         localStorage.setItem('bank:client', JSON.stringify(contasHzhong[contasHzhong.length-1]));
         window.location.assign('./confirmarEmail.html');
@@ -110,6 +110,53 @@ function verificarCPF(cpfRegister){
         return false;
     }
 }
+
+function verifyCpf(){
+    let cpfClass = document.querySelector('.cpfRegister');
+    let cpf = String(cpfClass.value)
+    let soma = 0;
+    let soma2 = 0;
+    const arrayValue = []; 
+    const arrayValue2 = [];
+    let cont = 10
+    let cont2 = 11
+    for(let c=0; c<9; c++) {
+        arrayValue.push(cont*(parseInt(cpf[c])));
+        cont--;
+    }
+    for(let el of arrayValue){
+        soma+= el;
+    }
+    for(let c=0; c<9; c++){
+        arrayValue2.push(cont2*(parseInt(cpf[c])));
+        cont2--;
+    }
+    let result = 11-(soma%11);
+    arrayValue2.push(2*result);
+
+    for(let el of  arrayValue2){
+        soma2+=el
+    }
+    let result2 = 11-(soma2%11);
+    if(result<2){
+        result = 0;
+    }
+    if(result<2){
+        result = 0;
+    }
+    let conclusao = `${result}`+ `${result2}`
+    let comparacao = cpf[cpf.length-2]+cpf[cpf.length-1]
+    console.log( conclusao, comparacao)
+    if(conclusao==comparacao){
+        return true;
+    } else {
+        errorRegister.innerHTML = `\n CPF Invalido \n`;
+        errorRegister.style.display = 'block';
+        return false;
+    }
+}
+
+
 
 function criarConta(cpfRegister, emailRegister, nameRegister, senha1){
     let id = 0;
