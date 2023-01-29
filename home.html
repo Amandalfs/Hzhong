@@ -10,25 +10,24 @@
 </head>
 <body>
     <header>
-        <h1><img  class="icon" src="assets/imgs/Icon.png" alt=""> "BANCO HZNONG"</h1>
+        <h1><img  class="icon" src="assets/imgs/Icon.png" alt="">BANCO HZNONG</h1>
         
     </header>
-    <section class="post">
-        <div>
-            <p class="resg">Ja tem Registro? </p>
-            <hr>
-            <p>Login</p>
-            <p><label for="">Email: </label> <input type="email" name="" id="txtHomeEmail"></p>
-            <p><label for="">Senha: <input type="password" name="inputSenha" id="txtHomeSenha"></label></p>
-            <p><button class="btnLogin">Entrar</button></p>
-            <p class="links"><a href="pages/register.html">Registrar conta</a> <a href="/pages/esqueciSenha.html">Esqueci a Senha</a></p>   
-            <span class="erroLogin">ERRO, Senha ou Email estao inválidos</span>
-            <hr>   
-        </div>
+    <section>
+        <section class="post">
+            <div class="container-login">
+                <h1>Login</h1>
+                <p><input type="email" name="" class="container-login-button" id="txtHomeEmail" placeholder="Email"></p>
+                <p><input type="password" name="inputSenha" class="container-login-button" id="txtHomeSenha" placeholder="Senha"></p>
+                <p class="links"><a href="/pages/esqueciSenha.html">Esqueci a Senha?</a></p>
+                <p><button class="btnLogin">Login</button></p>
+                <p class="links"><a href="pages/register.html">Nao tem conta? Register agora</a> </p>
+            </div class="container-login-part2">
+        </section>
     </section>
     <footer>
         <div>
-           <p><a href="">MENU</a></p>
+           
         </div>
     </footer>
     <script type="module" src="scrips/login.js"></script>
