@@ -55,7 +55,7 @@ function verificarSenhaRegister(senha1, senha2) {
         if(senha1===senha2){
             return true
         } else {
-            errorRegister.innerHTML += `<p>As senhas estao diferentes!!</p>`
+            errorRegister.innerHTML = `<p>As senhas estao diferentes!!</p>`
             errorRegister.style.display = ('block');
             return false
         } 
@@ -71,7 +71,7 @@ function verificarNasc() {
     if ((ano - nasc) >= 18) {
         return true
     }else {
-        errorRegister.innerHTML += `<p>As senhas estao diferentes!!</p>`
+        errorRegister.innerHTML = `<p>As senhas estao diferentes!!</p>`
         errorRegister.style.display = ('block');     
         return false
     }

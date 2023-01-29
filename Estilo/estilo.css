@@ -168,3 +168,24 @@ p {
     padding: 10px;
     border-radius: 30px;
 }
+
+.container-register {
+    display: inline-block;
+    height: 380px;
+    width: 500px;
+    border: 1px solid red;
+    margin: 4px auto;
+    padding: 5px;
+    font-size: 1.0em;
+    border-radius: 15px;
+    background-color: rgb(217, 176, 255);
+}
+
+.container-register input {
+    padding: 6px 5px;
+    border-radius: 12px;
+}
+
+.fav_type {
+    margin: 10px;
+}

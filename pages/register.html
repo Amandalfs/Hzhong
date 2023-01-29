@@ -15,25 +15,25 @@
     </header>
     <section class="post">
         <h2>Melhor Banco Do brasil</h2>
-        <hr>
-        <p><label for="">Nome: </label> <input type="text" name="txtName" id="txtName" class="nameRegister" maxlength="16"></p>
-        <p><label for="">Email: <input type="email" name="txtEmail" id="txtEmail" class="emailRegister"></label></p>
-        <p><label for="">Senha: </label> <input type="password" name="inputSenha" id="senha1" minlength="8"  maxlength="16" class="senha1Register"></p>
-        <p><label for="">Repita Senha: </label><input type="password" name="inputSenha" id="senha2" minlength="8" maxlength="16" class="senha2Register"></p>
-        <p><label for="">CPF: </label> <input type="text" name="numCPF" id="numCPF" maxlength="11" class="cpfRegister"></p>
-        <p><label for="">Data de nascimento: </label> <input type="text" maxlength="8" name="nasc" id="nasc" class="nascRegister"></p>
-        <p>Tipo de conta: </p>
-        <form action="">
-            <label for="poupanca">Poupanca</label><input type="radio" name="fav_type" class="fav_type" id="fav_pou" checked>
-            <label for="corrente">Corrente</label><input type="radio" name="fav_type" class="fav_type" id="fav_corre">
-            <label for="universitaria">Universitaria</label><input type="radio" name="fav_type" class="fav_type" id="fav_uni">
-        </form>
-        <button class="btnRegister">Criar Conta</button>
-        <span class="errorRegister">Senha Curta demais</span>
-        <hr>
+        <div class="container-register">
+            <p><input type="text" name="txtName" id="txtName" class="nameRegister" maxlength="16" placeholder="Nome"></p>
+            <p><input type="email" name="txtEmail" id="txtEmail" class="emailRegister" placeholder="Email"></p>
+            <p><input type="password" name="inputSenha" id="senha1" minlength="8"  maxlength="16" class="senha1Register" placeholder="Senha"></p>
+            <p><input type="password" name="inputSenha" id="senha2" minlength="8" maxlength="16" class="senha2Register" placeholder="Repita a senha"></p>
+            <p><input type="text" name="numCPF" id="numCPF" maxlength="11" class="cpfRegister" placeholder="CPF"></p>
+            <p><input type="text" maxlength="8" name="nasc" id="nasc" class="nascRegister" placeholder="Nascimento"></p>
+            <p>Tipo de conta: </p>
+            <form action="">
+                <label for="poupanca">Poupanca</label><input type="radio" name="fav_type" class="fav_type" id="fav_pou" checked>
+                <label for="corrente">Corrente</label><input type="radio" name="fav_type" class="fav_type" id="fav_corre">
+                <label for="universitaria">Universitaria</label><input type="radio" name="fav_type" class="fav_type" id="fav_uni">
+            </form>
+            <button class="btnRegister">Criar Conta</button>
+            <span class="errorRegister">Senha Curta demais</span>
+        </div>
     </section>
     <footer>
-        <p><a href="/login.html">voltar para a pagina Principal</a></p>
+        <p><a href="/login.html">home</a></p>
     </footer>
     <script type="module" src="/scrips/register.js"></script>
 </body>
