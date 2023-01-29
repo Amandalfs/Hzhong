@@ -95,3 +95,27 @@ body {
     text-align: justify;
     float: right;
 }
+
+.container-list-paravoce{
+    width: 100%;
+    height: 140px;
+    padding: 10px;
+    align-items: left !important;
+    text-align: left !important;
+    transition: 3s;
+    text-align: justify;
+    display: none;
+}
+
+.container-list-paravoce-list{
+    font-size: 0.8em;
+    display: inline-flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+    margin-left: 50px;
+    
+}
+
+.container-list-paravoce-list p{
+    font-size: 1em;
+}
