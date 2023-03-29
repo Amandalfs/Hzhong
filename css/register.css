@@ -178,7 +178,7 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-.btnRegister p {
+.btnRegister h1 {
     font-family: 'Jacques Francois';
     font-style: normal;
     font-weight: 400;
@@ -190,5 +190,6 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-bottom: 20px;
 
 }
