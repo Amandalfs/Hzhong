@@ -1,0 +1,117 @@
+@import url('reset.css');
+@import url('global.css');
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    width: 764px;
+    border: 1px solid black;
+    margin: 0 auto;
+    margin-top: 86px;
+}
+
+.conteudo_title h1 {
+    margin-bottom: 56px;
+
+    font-family: 'Jacques Francois';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 45px;
+    
+    color: #000000;
+}
+
+.cards {
+    justify-content: center;
+}
+
+.saque {
+    display: flex;
+    flex-direction: column;
+    margin-top: 75px;
+}
+
+.saque h1 {
+    margin-bottom: 30px;
+
+    font-family: 'Jacques Francois';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 45px;
+    
+    color: #000000;
+}
+
+.saque p {
+    font-family: 'Jacques Francois';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: #000000;
+}
+
+.saque input {
+    width: 266px;
+    height: 34px;
+
+    background: #D5CDCD;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.saque input:hover {
+    background: #eeb8ff;
+    transition: 0.4s;
+    transform: scale(1.03);
+}
+
+
+.saque button {
+    width: 118px;
+    height: 64px;
+
+    background: linear-gradient(to right, #FA00FF 0%, #7000FF 100%);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.saque button:hover {
+    background: #9c57f5;
+    transform: scale(0.9);
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    transition: 0.5s;
+    
+}
+.saque button:active {
+    background: #750bff;
+    transform: scale(0.95);
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    transition: 0.8s;
+    
+}
+
+.saque h2 {
+    font-family: 'Jacques Francois';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 45px;
+    
+    color: #FFFFFF;
+}
+
+.saque_controle {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+.saque_controle div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

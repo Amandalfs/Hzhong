@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banco Hzhong</title>
     <link rel="stylesheet" href="../css/siderBar.css">
-    <link rel="stylesheet" href="../css/extrato.css">
+    <link rel="stylesheet" href="../css/sacar.css">
+    <link rel="stylesheet" href="../css/cards.css">
     <link rel="stylesheet" href="../css/utils.css">
 </head>
 <body>
@@ -23,7 +24,7 @@
                 <a href="extrato.html">
                     <div><img src="../assets/imagens/contahome/icons/extrato_icon.png" alt=""><h2>Extrato</h2></div>
                 </a>
-                <a href="sacar.html">
+                <a href="">
                     <div><img src="../assets/imagens/contahome/icons/sacar_icon.png" alt=""><h2>Sacar</h2></div>
                 </a>
                 <a href="">
@@ -53,56 +54,32 @@
         </section>
         <section class="conteudo">
             <div class="conteudo_title">
-                <h1>Extrato</h1>
+                <h1>Sacar Dinheiro</h1>
             </div>
-            <div class="conteudo_controle">
-                <div class="controle_inicio">
-                    <h1>Data Inicial</h1>
-                    <input type="date" name="" id="">
+            <div class="cards">
+                <div class="cards_saldo">
+                    <h1>Saldo da conta</h1>
+                    <h1 class="saldo_value">R$ 50.00</h1>
                 </div>
-                <div class="controle_fim">
-                    <h1>Data  Final</h1>
-                    <input type="date" name="" id="">
-                </div>
-                <button class="controle_executar">
-                    <h2>Monstrar</h2>
-                </button>
-            </div>
-            <div class="historico">
-                <h1>Transacoes</h1>
-                
-                <div class="template_transacoes">
-                    <div class="transacao_menu">
-                        <div class="menu_data">
-                            <p>Data</p>
-                        </div>
-                        <div class="menu_desc">
-                            <p>Descricao</p>
-                        </div>
-                    </div>
-                    <div class="template">
-                        <div class="template_data">02/10/2003</div>
-                        <div class="template_desc">Voce sacou tanto dinheiro</div>
-                    </div>
-                    <div class="template">
-                        <div class="template_data">02/10/2003</div>
-                        <div class="template_desc">Voce sacou tanto dinheiro</div>
-                    </div>
-                    <div class="template">
-                        <div class="template_data">02/10/2003</div>
-                        <div class="template_desc">Voce sacou tanto dinheiro</div>
-                    </div>
-                    <div class="template">
-                        <div class="template_data">02/10/2003</div>
-                        <div class="template_desc">Voce sacou tanto dinheiro</div>
-                    </div>
-                    <div class="template">
-                        <div class="template_data">02/10/2003</div>
-                        <div class="template_desc">Voce sacou tanto dinheiro</div>
-                    </div>
+                <div class="cards_cofres">
+                    <h1>Seus Cofres</h1>
                 </div>
             </div>
-        </section>
+            <div class="saque">
+                <h1>Sacar Dinheiro</h1>
+                <div class="saque_controle">
+                    <div>
+                        <p>Valor</p>
+                        <input type="number" name="" id="" class="saque_value">
+                    </div>
+                    <div>
+                        <p>Senha</p>
+                        <input type="password" name="" class="saque_password" id="">
+                    </div>
+                    <button>
+                        <h2>Sacar</h2>
+                    </button>
+                </div>
         </section>
     </main>
 </body>

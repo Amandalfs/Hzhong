@@ -1,6 +1,13 @@
 @import url('reset.css');
 @import url('global.css');
 
+
+main {
+    display: flex;
+    flex-direction: row;
+    background: #FDEBED;
+}
+
 .siderBar {
     display: flex;
     flex-direction: column;

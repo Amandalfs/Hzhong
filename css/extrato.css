@@ -2,11 +2,6 @@
 @import url('global.css');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');    
 
-main {
-    display: flex;
-    flex-direction: row;
-    background: #FDEBED;
-}
 
 .conteudo {
     display: flex;
