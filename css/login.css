@@ -1,0 +1,166 @@
+@import url('reset.css');
+@import url('global.css');
+
+body {
+    background: url('../assets/imagens/background.png');
+    position: absolute;
+    width: 1330px;
+}
+
+.login {
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    height: 637px;
+    
+    border-radius: 30px;
+    align-self: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.login-sobre {
+    display: flex;
+    flex-direction: column;
+
+    width: 500px;
+    height: 637px;
+    padding-left: 113px;
+    padding-right: 64px;
+    background: rgba(189, 122, 255, 0.36);
+    border-radius: 30px 0px 0px 30px;
+}
+
+.login-sobre h1 {
+    width: 323px;
+    height: 120px;
+
+    margin-top: 243px;
+    margin-bottom: 21px;
+
+    font-family: 'Jacques Francois';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 42px;
+
+    color: #FFFFFF;
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+}
+
+.icon p {
+    width: 108px;
+    height: 40px;
+
+    font-family: 'Jacques Francois';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+
+    color: #FFFFFF;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+
+    width: 500px;
+    height: 637px;
+
+    padding: 165px 0 128px 75px;
+    border-radius: 0 30px 30px 0;
+
+
+    background: #D9D9D9;
+
+}
+
+.login-form h1 {
+    margin-bottom: 16px;
+
+    font-family: 'Jacques Francois';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 42px;
+
+    color: #000000;
+}
+
+.login-form p {
+    font-family: 'Jacques Francois';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: #000000;
+}
+
+input {
+    width: 266px;
+    height: 34px;
+
+    background: #D5CDCD;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.inputUsername {
+    margin-top: 5px;
+    margin-bottom: 16px;
+}
+
+
+.inputPassword {
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.btnLogin {
+    width: 266px;
+    height: 50px;
+
+    background: rgba(189, 122, 255, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    margin-bottom: 23px;
+}
+
+.btnLogin h1{
+    font-family: 'Jacques Francois';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 42px;
+
+    background: linear-gradient(180deg, #5A007A 0%, rgba(1, 11, 255, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.form-text {
+    gap: 16px;
+}
+
+.form-text a p {
+    font-family: 'Jacques Francois';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    /* identical to box height */
+
+
+    color: rgba(0, 0, 0, 0.5)
+}

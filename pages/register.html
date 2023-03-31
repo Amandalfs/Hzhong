@@ -1,40 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banco Hzhong</title>
-    <link rel="stylesheet" href="/Estilo/estilo.css">
-    <link rel="shortcut icon" href="/assets/imgs/Icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/utils.css">
 </head>
 <body>
-    <header>
-        <h1><img class='icon' src="/assets/imgs/Icon.png" alt=""> Voce no Hzhong Pode ser Livre</h1>
-        
-    </header>
-    <section class="post">
-        <h2>Melhor Banco Do brasil</h2>
-        <div class="container-register">
-            <p><input type="text" name="txtName" id="txtName" class="nameRegister" maxlength="16" placeholder="Nome"></p>
-            <p><input type="email" name="txtEmail" id="txtEmail" class="emailRegister" placeholder="Email"></p>
-            <p><input type="password" name="inputSenha" id="senha1" minlength="8"  maxlength="16" class="senha1Register" placeholder="Senha"></p>
-            <p><input type="password" name="inputSenha" id="senha2" minlength="8" maxlength="16" class="senha2Register" placeholder="Repita a senha"></p>
-            <p><input type="text" name="numCPF" id="numCPF" maxlength="11" class="cpfRegister" placeholder="CPF"></p>
-            <p><input type="text" maxlength="8" name="nasc" id="nasc" class="nascRegister" placeholder="Nascimento"></p>
-            <p>Tipo de conta: </p>
-            <form action="">
-                <label for="poupanca">Poupanca</label><input type="radio" name="fav_type" class="fav_type" id="fav_pou" checked>
-                <label for="corrente">Corrente</label><input type="radio" name="fav_type" class="fav_type" id="fav_corre">
-                <label for="universitaria">Universitaria</label><input type="radio" name="fav_type" class="fav_type" id="fav_uni">
+    <main class="register">
+        <section class="register-sobre">
+            <h1>Nossa meta é voce ter um controle maior sobre suas financias</h1>
+            <div class="icon">
+                <img src="/assets/imagens/fundadora.png" alt="">
+                <p>Amanda Fundadora</p>
+            </div>
+        </section>
+        <section class="register-form">
+            <h1>Registro</h1>
+            <form class="form-container">
+                <div class="container-first">   
+                    <div>
+                        <p>Nome</p>
+                        <input type="text" name="" id="" class="pointer hover_purple active_purple">
+                    </div>
+                    <div>
+                        <p>Usuario</p>
+                        <input type="text" name="" id="" class="pointer hover_purple active_purple">
+                    </div>
+                    <div>
+                        <p>Cpf</p>
+                        <input type="text" name="" id="" class="pointer hover_purple active_purple">
+                    </div>
+                    <div>
+                        <p>Email</p>
+                        <input type="email" name="" id="" class="pointer hover_purple active_purple">
+                    </div>
+                </div>
+                <div class="container-segund">
+                    <div>
+                        <p>Senha</p>
+                        <input type="password" name="" id="" class="pointer hover_purple active_purple">
+                    </div>
+                    <div>
+                        <p>Repita a senha</p>
+                        <input type="password" name="" id="" class="pointer hover_purple active_purple">
+                    </div>
+                    <div>
+                        <p>Data de nascimento</p>
+                        <input type="text" name="" id="" class="pointer hover_purple active_purple">
+                    </div>
+                    <div>
+                        <p>Tipo de conta</p>
+                        <select name="" id="" class="pointer hover_purple active_purple">
+                            <option value="">Poupanca</option>
+                            <option value="">Corrente</option>
+                            <option value="">Universitaria</option>
+                        </select>
+                    </div>
+                </div>
             </form>
-            <button class="btnRegister">Criar Conta</button>
-            <span class="errorRegister">Senha Curta demais</span>
-        </div>
-    </section>
-    <footer>
-        <p><a href="/login.html">home</a></p>
-    </footer>
-    <script type="module" src="/scrips/register.js"></script>
+            <button class="btnRegister pointer hover_btn"><h1>Registrar</h1></button>
+            <a href="../home.html">
+                <p>Ja tem conta?</p>
+            </a>
+            <span class="errorRegister"></span>
+        </section>
+    </main>
 </body>
 </html>

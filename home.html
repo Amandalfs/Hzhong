@@ -4,65 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hzhong - Voce no controle do seu dinheiro</title>
-    <link rel="shortcut icon" href="assets/imgs/Icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="Estilo/newStyle.css">
+    <title>Banco Hzhong</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/utils.css">
 </head>
 <body>
-    <section class="container-header">
-        <div class="container-list">
-            <ul>
-                <li><img class="icon" src="assets/imgs/Icon.png" alt=""></li>
-                <li>Pagina Inicial</li>
-                <li>></li>
-                <li>Para voce</li>
-                <li class="container-list-seta-paravoce"><img class="icon"  src="assets/imgs/seta-baixo-icon.png" alt=""></li>
-                <li>Para o seu negocio</li>
-                <li><img class="icon"  src="assets/imgs/seta-baixo-icon.png" alt=""></li>
-                <li>O Hzhong</li>
-                <li><img class="icon"  src="assets/imgs/seta-baixo-icon.png" alt=""></li>
-                <li>Perguntas</li>
-                <li><img class="icon"  src="assets/imgs/seta-baixo-icon.png" alt=""></li>
-                <li class="container-login"><img src="assets/imgs/sair-icon.png" alt=""></li>
-                <li class="container-login"><a href="login.html">Login</a> </li>
-            </ul>
-        </div>  
-        <div class="container-list-paravoce">
-                <ul class="container-list-paravoce-list">
-                    <li><p>Hzhong</p></li>
-                    <li>Conta Hzhong</li>
-                    <li>Cartao De Credito</li>
-                    <li>Tudo sobre pix</li>
-                </ul>
-                <ul class="container-list-paravoce-list">
-                    <li><p>Hzhong Universitario</p></li>
-                    <li>Conta para Universitarios</li>
-                </ul>
-                <ul class="container-list-paravoce-list">
-                    <li><p>Hzhong Seguros</p></li>
-                    <li>Seguro de vida</li>
-                    <li>Seguro de celular</li>
-                </ul>
-        </div>      
-    </section>
-    <section class="container-page">
-        <div>
-            <div class="container-page-text">
-                <h1>O futuro é a razão que <br> a gente faz planos.</h1>
-                <p>Escolha o futuro. Comece a controlar melhor <br> sua vida financeira com o Hzhong.</p>
+    <main class="login">
+        <section class="login-sobre">
+            <h1>Nossa meta é voce ter um controle maior sobre suas financias</h1>
+            <div class="icon">
+                <img src="/assets/imagens/fundadora.png" alt="">
+                <p>Amanda Fundadora</p>
             </div>
-            <!-- <img src="assets/imgs/pexels-fox-1595391.jpg" alt=""> -->
-        </div>
-    </section>
-    <section class="container-footer">
-        <div>
-            <ul>
-                <li>todas nossas redes socias aqui!</li>
-                <li><a target="_blank" href="https://www.linkedin.com/in/amanda-rodrigues-a92271166/"><img src="assets/imgs/linkedin-icon.png" alt=""></a></li>
-                <li><a target="_blank" href="https://www.instagram.com/amandalofs"><img src="assets/imgs/Instagram-Icon.png" alt=""></a></li>
-                <li><a target="_blank" href="https://github.com/Amandalfs"><img src="assets/imgs/github-icon.png" alt=""></a></li>
-            </ul>
-        </div>
-    </section>
+        </section>
+        <section class="login-form">
+            <h1>Login</h1>
+            <p>Usuario</p>
+            <input type="text" class="inputUsername pointer hover_purple active_purple" name="" id="">
+            <input type="password" class="inputPassword pointer hover_purple active_purple" name="" id="">
+            <button class="btnLogin pointer hover_btn"><h1>Entrar</h1></button>
+            <div class="form-text">
+                <a href="">
+                    <p>Esqueceu a senha?</p>
+                </a>
+                <a href="/pages/register.html">
+                    <p>Nao tem conta?</p>
+                </a>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
