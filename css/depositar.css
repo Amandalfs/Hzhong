@@ -22,51 +22,8 @@
     justify-content: center;
 }
 
-.depositar {
-    display: flex;
-    flex-direction: column;
-    margin-top: 75px;
-}
 
-.depositar h1 {
-    margin-bottom: 30px;
-
-    font-family: 'Jacques Francois';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 34px;
-    line-height: 45px;
-    
-    color: #000000;
-}
-
-.depositar p {
-    font-family: 'Jacques Francois';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 21px;
-
-    color: #000000;
-}
-
-.depositar input{
-    width: 266px;
-    height: 34px;
-
-    background: #D5CDCD;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-.depositar input:hover {
-    background: #eeb8ff;
-    transition: 0.4s;
-    transform: scale(1.03);
-}
-
-
-.depositar button {
+.depositar_btn {
     width: 120px;
     height: 50px;
 
@@ -75,39 +32,6 @@
     border-radius: 20px;
 }
 
-.depositar button:hover {
-    background: #9c57f5;
-    transform: scale(0.9);
-    border: 1px solid rgba(0, 0, 0, 0.6);
-    transition: 0.5s;
-    
-}
-.depositar button:active {
-    background: #750bff;
-    transform: scale(0.95);
-    border: 1px solid rgba(0, 0, 0, 0.9);
-    transition: 0.8s;
-    
-}
-
-.depositar h2 {
-    font-family: 'Jacques Francois';
-    font-style: normal;
-    font-weight: 400;
+.depositar_btn h2 {
     font-size: 20px;
-    line-height: 45px;
-    
-    color: #FFFFFF;
-}
-
-.depositar_controle {
-    display: flex;
-    flex-direction: column;
-    gap: 27px;
-}
-
-.depositar_controle div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
