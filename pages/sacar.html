@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="../css/transacoes.css">
     <link rel="stylesheet" href="../css/sacar.css">
     <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/pop-up.css">
     <link rel="stylesheet" href="../css/utils.css">
 </head>
-<body>
+<body class="sacar_page">
     <main>
         <section class="siderBar">
             <div class="ofside_perfil">
@@ -45,7 +46,7 @@
                         <img src="../assets/imagens/contahome/icons/config_icon.png" alt=""><h2>Configuracoes</h2>
                     </div>
                 </a>
-                <a href="">
+                <a href="../home.html">
                     <div>
                         <img src="../assets/imagens/contahome/icons/sair_icon.png" alt="">
                         <h2>Sair</h2>
@@ -66,6 +67,13 @@
                     <h1>Seus Cofres</h1>
                 </div>
             </div>
+            <div class="pop-up">
+                <h1>Saque Concluido</h1>
+                <div>
+                    <h2>R$<span class="saque_span"></span>,00</h2>
+                    <img class="btn_close" src="../assets/imagens/certo.png" alt="">
+                </div>
+            </div>
             <div class="transacoes">
                 <div class="transacoes_controle">
                     <div>
@@ -80,7 +88,10 @@
                         <h2>Sacar</h2>
                     </button>
                 </div>
+                <span class="error_saque"></span>
         </section>
     </main>
+    <script src="../assets/js/sacar.js"></script>
+    <script src="../assets/js/pop_up.js"></script>
 </body>
 </html>

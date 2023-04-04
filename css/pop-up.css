@@ -1,40 +1,45 @@
 @import url('reset.css');
 @import url('global.css');
 
-.pop-up_deposito {
-    position: absolute;
-    display: none;
+.pop-up {
+    position: fixed;
+    display: flex;
+    
     flex-direction: column;
-    z-index: 1;
-
+    z-index: 2;
+    
     bottom: 510px;
     right: 450px;
-
+    
     width: 250px;
     height: 80px;
-
+    
     padding: 15px;
-
+    
     text-align: center;
     justify-content: center;
     
     background-color: #ffffff;
     border: 1px solid black;
     border-radius: 10px;
+    
+    opacity: 0;
+    transition: opacity 0.5s linear;
+    transition: transform 0.5s linear;
 }
 
-.pop-up_deposito div {
+.pop-up div {
     display: flex;
     flex-direction: row;
     margin-left: 10px;
     color: rgb(153, 255, 0);
 }
 
-.pop-up_deposito div img {
+.pop-up div img {
     height: 35px;
     width: 50px;
 }
 
-.pop-up_deposito div h2 {
+.pop-up div h2 {
     margin-top: 5px;
 }

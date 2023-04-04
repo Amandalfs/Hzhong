@@ -13,6 +13,7 @@ async function loginUser(){
     const username = await inputUser.value;
     const inputPassword = await document.querySelector('.inputPassword');
     const password = await inputPassword.value;
+    
     const result = await fetch(`${url}/loginUser/?username=${username}&password=${password}`)
         .then(result => result.json())
         .then(data => {return data.userData})
