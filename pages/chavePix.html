@@ -54,13 +54,13 @@
         <section class="conteudo">
             <h1>Chave pix</h1>
             <div class="controle_chave">
-                <button class="transacoes_active-button transacoes_hover-button">Gerar key</button>
-                <button class="transacoes_active-button transacoes_hover-button">Deletar Key</button>
+                <button class="transacoes_active-button transacoes_hover-button btnCreate">Gerar key</button>
+                <button class="transacoes_active-button transacoes_hover-button btnDelete">Deletar Key</button>
             </div>
             <div class="keys">
                 <div class="keys-options">
                     <label for="">Chave Aleatoria</label>
-                    <div class="key_campo">
+                    <div class="key_campo chavePix_campo">
                     
                     </div>
                 </div>
@@ -101,7 +101,12 @@
 
                 </div>
             </div>
+            <div class="campo_senha">
+                <input type="password" name="" class="password" id="" placeholder="Digite sua senha">
+            </div>
+            <span class="error_pix"></span>
         </section>
+        <script src="../assets/js/keyDeleteCreate.js"></script>
     </main>
 </body>
 </html>
