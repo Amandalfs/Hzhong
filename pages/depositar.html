@@ -46,7 +46,7 @@
                         <img src="../assets/imagens/contahome/icons/config_icon.png" alt=""><h2>Configuracoes</h2>
                     </div>
                 </a>
-                <a href="">
+                <a href="../home.html">
                     <div>
                         <img src="../assets/imagens/contahome/icons/sair_icon.png" alt="">
                         <h2>Sair</h2>
@@ -67,11 +67,11 @@
                     <h1>Seus Cofres</h1>
                 </div>
             </div>
-            <div class="pop-up_deposito">
+            <div class="pop-up">
                 <h1>Deposito Concluido</h1>
                 <div>
-                    <h2>R$ 50,00 </h2>
-                    <img src="../assets/imagens/certo.png" alt="">
+                    <h2>R$ <span class="deposito_span"></span>,00 </h2>
+                    <img src="../assets/imagens/certo.png" class="btn_close" alt="">
                 </div>
             </div>
             <div class="transacoes">
@@ -88,7 +88,10 @@
                         <h2>Depositar</h2>
                     </button>
                 </div>
+                <span class="error_deposito"></span>
         </section>
+        <script src="../assets/js/depositar.js"></script>
+        <script src="../assets/js/pop_up.js"></script>
     </main>
 </body>
 </html>
