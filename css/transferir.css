@@ -31,3 +31,9 @@
 .transferir_btn h2 {
     font-size: 20px;
 }
+
+.error_transferir {
+    color: red;
+    font-size: 20px;
+    margin: 30px;
+} 

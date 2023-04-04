@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/cards.css">
     <link rel="stylesheet" href="../css/transacoes.css">
     <link rel="stylesheet" href="../css/transferir.css">
+    <link rel="stylesheet" href="../css/pop-up.css">
     <link rel="stylesheet" href="../css/utils.css">
 </head>
 <body>
@@ -45,7 +46,7 @@
                         <img src="../assets/imagens/contahome/icons/config_icon.png" alt=""><h2>Configuracoes</h2>
                     </div>
                 </a>
-                <a href="">
+                <a href="../home.html">
                     <div>
                         <img src="../assets/imagens/contahome/icons/sair_icon.png" alt="">
                         <h2>Sair</h2>
@@ -66,25 +67,34 @@
                     <h1>Seus Cofres</h1>
                 </div>
             </div>
+            <div class="pop-up">
+                <h1>Transacao Concluido</h1>
+                <div>
+                    <h2>R$ <span class="transferir_span"></span>,00 </h2>
+                    <img src="../assets/imagens/certo.png" class="btn_close" alt="">
+                </div>
+            </div>
             <div class="transacoes">
                 <div class="transacoes_controle">
                     <div>
                         <p>Valor</p>
-                        <input type="number" name="" id="" class="saque_value transacoes_hover-input">
+                        <input type="number" name="" id="" class="transfer_value transacoes_hover-input">
                     </div>
                     <div>
                         <p>Senha</p>
-                        <input type="password" name="" class="saque_password transacoes_hover-input" id="">
+                        <input type="password" name="" class="transferir_password transacoes_hover-input" id="">
                     </div>
                     <div>
                         <p>Chave Pix</p>
-                        <input type="text" class="saque_password transacoes_hover-input" id="">
+                        <input type="text" class="keypix_transferir transacoes_hover-input" id="">
                     </div>
                     <button class="transferir_btn transacoes_active-button transacoes_hover-button">
                         <h2>Transferir</h2>
                     </button>
                 </div>
+                <span class="error_transferir"></span>
         </section>
+        <script src="../assets/js/transferir.js"></script>
     </main>
 </body>
 </html>
