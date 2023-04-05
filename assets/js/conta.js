@@ -1,14 +1,19 @@
-const reloadConta = document.querySelector('.conta_principal')
-document.onload(monstrarDados())
+window.addEventListener('load', ()=>{
+    monstrarDados()
+})
 
-function monstrarDados(){
+
+async function monstrarDados(){
     const transacoes = document.querySelector('.template_transacoes');
-    const dados = JSON.parse(localStorage.getItem('bank:client', JSON.stringify)); 
-    console.log(dados);
     const spanName = document.querySelector('.name_perfil'); 
     const saldo_value = document.querySelector('.saldo_value')
-    spanName.innerHTML = `${dados.username}`
-    saldo_value.innerHTML = `R$ ${dados.Saldo},00`
+
+    const username = JSON.parse(localStorage.getItem('bank:client', JSON.stringify)).username; 
+    const dados = await apiRender(username);
+
+    spanName.innerHTML = `${username}`
+    saldo_value.innerHTML = `R$ ${dados.saldo},00`
+
     dados.extrato.forEach(element => {
         const divPrincipal = document.createElement('div')
         divPrincipal.setAttribute('class', 'template');
@@ -22,6 +27,7 @@ function monstrarDados(){
         divPrincipal.appendChild(divDesc);
         transacoes.appendChild(divPrincipal);
     });
+    
 }   
 
 {/* <div class="template">
@@ -33,3 +39,11 @@ const btnSair = document.querySelector('.btn_sair');
 btnSair.addEventListener('click', ()=>{
     window.location.assign('../home.html');
 })
+
+async function apiRender(username){
+    const dados = await fetch(`https://api-bancohzhong.cyclic.app/users/userAconnt?username=${username}`)
+        .then(result => result.json())
+            .then(data => {return data.dados})
+                .catch((e)=> {return false});
+    return dados;
+}
