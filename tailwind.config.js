@@ -14,7 +14,7 @@ module.exports = {
       },
       colors: {
         fontFamily: {
-          sans: 'var(--font-roboto)',
+          sans: 'var(--font-poppins)',
           alt: 'var(--font-baijamjuree)',
         },
         black: {
