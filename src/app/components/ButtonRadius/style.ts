@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { defaultTheme } from "@/app/styles/themes/DefaultTheme";
 
 export type IVariantButton = 'primary' | 'segundary'
 export type IVariantSize = 'small' | 'medium' | 'large'
@@ -28,12 +29,12 @@ const buttonSize = {
 
 const buttonVariant = {
     primary: {
-        colorPrimary: "#FDDEED", // pink 50
-        colorSegundary: "hsla(259, 52%, 48%, 1)", // purple 500
+        color: defaultTheme.colors.pink[50],
+        background: defaultTheme.colors.purple[700]
     },
     segundary: {
-        colorPrimary: "hsla(259, 52%, 48%, 1)", // purple 500
-        colorSegundary: "hsla(331, 84%, 88%, 1)", // pink 150
+        color: defaultTheme.colors.purple[700],
+        background: defaultTheme.colors.pink[100]
     }
 }
 
@@ -42,8 +43,8 @@ export const ButtonRadiusContainer = styled.button<IButtonRadiusContainer>`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: ${props => buttonVariant[props.variantButton].colorPrimary};
-    background-color: ${props => buttonVariant[props.variantButton].colorSegundary};
+    color: ${props => buttonVariant[props.variantButton].color};
+    background-color: ${props => buttonVariant[props.variantButton].background};
     height: ${props => buttonSize[props.variantSize].height};
     width: ${props => buttonSize[props.variantSize].width};
     font-size: ${props => buttonSize[props.variantSize].fontSize};
