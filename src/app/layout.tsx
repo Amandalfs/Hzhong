@@ -3,6 +3,7 @@ import './globals.css'
 import { Poppins } from 'next/font/google'
 import { defaultTheme } from './styles/themes/DefaultTheme';
 import { ThemeProvider } from 'styled-components';
+import StyledComponentsRegistry from '@/lib/registry';
 
 const poppins = Poppins({ subsets: ['latin'], variable: '--font-poppins', weight: '500' });
 
@@ -19,9 +20,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <ThemeProvider theme={defaultTheme}>
-        <body className={poppins.variable}>{children}</body>
-      </ThemeProvider>
+        <StyledComponentsRegistry>
+          <ThemeProvider theme={defaultTheme}>
+            <body className={poppins.variable}>
+                {children}
+            </body>
+          </ThemeProvider>
+        </StyledComponentsRegistry>
     </html>
   )
 }
