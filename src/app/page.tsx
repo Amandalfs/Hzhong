@@ -1,9 +1,11 @@
-import { ButtonRadius } from './components/ButtonRadius'
+
+import Card from './components/Card';
+import money from '../assets/withdrawImg.svg';
 
 export default function Home() {
   return (
-    <main>
-      <ButtonRadius title={"Componente Button"} />
-    </main>
+      <main>
+        <Card imgUrl={money} title="Money" />
+      </main>
   )
 }
