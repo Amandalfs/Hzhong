@@ -1,12 +1,8 @@
 
-import { MarketPlaceMenu } from './components/MarketPlaceMenu';
-import { ProfileMenu } from './components/ProfileMenu';
-import { SignInSignUpMenu } from './components/SignSignUpMenu';
+import { HeaderHome } from './components/HeaderHome';
 
 export default function Home() {
-  return (<main className='flex flex-row gap-2'>
-        <SignInSignUpMenu />
-        <ProfileMenu />
-        <MarketPlaceMenu />
+  return (<main className='flex flex-col gap-2'>
+    <HeaderHome />
   </main>)
 }

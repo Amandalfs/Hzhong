@@ -11,7 +11,7 @@ export function ProfileMenu(){
             <h1>Conta</h1>
         </div>
         {
-            <CardProfile />
+           false && <CardProfile />
         }
     </MenuContainer>
 }

@@ -11,7 +11,7 @@ export function SignInSignUpMenu(){
             <h1>Cadastrar / Login</h1>
         </div>
         {
-            <CardSignInSignUp />
+           false && <CardSignInSignUp />
         }
     </MenuContainer>)
 }

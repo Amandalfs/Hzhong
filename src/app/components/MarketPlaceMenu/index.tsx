@@ -11,7 +11,7 @@ export function MarketPlaceMenu(){
             <h1>Conta</h1>
         </div>
         {
-            <CardMarketPlace />
+           false && <CardMarketPlace />
         }
     </MenuContainer>)
 }
