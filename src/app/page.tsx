@@ -1,10 +1,10 @@
 
-import { ProfileMenu } from './components/ProfileMenu/index';
+import { SignInSignUpMenu } from './components/SignSignUpMenu';
 
 export default function Home() {
   return (
       <main>
-        <ProfileMenu />
+        <SignInSignUpMenu />
       </main>
   )
 }
