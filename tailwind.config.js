@@ -11,9 +11,7 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-      spacing: {
-        '128': '84rem',
+        footer: "url(/src/assets/backgroundFooter.png)",
       },
       fontFamily: {
         sans: 'var(--font-poppins)',
