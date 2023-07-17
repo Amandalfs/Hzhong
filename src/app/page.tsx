@@ -1,11 +1,10 @@
 
-import Card from './components/Card';
-import money from '../assets/withdrawImg.svg';
+import { ProfileMenu } from './components/ProfileMenu/index';
 
 export default function Home() {
   return (
       <main>
-        <Card imgUrl={money} title="Money" />
+        <ProfileMenu />
       </main>
   )
 }
