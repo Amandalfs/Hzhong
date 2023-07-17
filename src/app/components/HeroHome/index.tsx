@@ -1,5 +1,11 @@
 import { ButtonRadius } from "../ButtonRadius";
 import Image  from 'next/image';
+import { Card } from './../Card';
+
+import withdrawIcon from "@/assets/transactions/icons/withdrawIcon.svg";
+import DepositIcon from "@/assets/transactions/icons/depositIcon.svg";
+import TransferIcon from "@/assets/transactions/icons/transferIcon.svg";
+import PayIcon from "@/assets/transactions/icons/payIcon.svg";
 
 export function HeroHome(){
     return (<section>
@@ -15,12 +21,17 @@ export function HeroHome(){
                 </h1>
                 <div className="flex flex-row gap-4">
                     <ButtonRadius title="Criar sua conta" variantButton="primary" variantSize="large" />
-                    <ButtonRadius title="Checar Balanco" variantButton="segundary" variantSize="large" />
+                    <ButtonRadius title="Checar Saldo" variantButton="segundary" variantSize="large" />
                 </div>
             </div>
         </div>
-        <div className="flex flex-row h-[29rem]">
-
+        <div className="flex flex-row h-[29rem] justify-center relative">
+            <div className="flex flex-row absolute gap-10 bottom-2/3 ">
+                <Card imgUrl={TransferIcon} title="Transfirir Dinheiro" />
+                <Card imgUrl={withdrawIcon} title="Sacar" />
+                <Card imgUrl={DepositIcon} title="Deposita" />
+                <Card imgUrl={PayIcon} title="Pagamentos Online" />
+            </div>
         </div>
     </section>)
 }

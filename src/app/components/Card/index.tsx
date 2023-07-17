@@ -7,7 +7,7 @@ interface ICard {
     imgUrl: string,
 }
 
-export default function Card({imgUrl, title}: ICard){  
+export function Card({imgUrl, title}: ICard){  
     return(<CardContainer>
         <Image className="Image" src={imgUrl} alt="" />
         <p>
