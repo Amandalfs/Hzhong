@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { styled } from "styled-components";
 
-export const  CardProfileContainer = styled.nav`
+export const  CardMenuContainer = styled.nav`
     display: flex;
     flex-direction: column;
     align-items: center;

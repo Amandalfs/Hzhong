@@ -1,10 +1,9 @@
-import Link from "next/link";
-import { CardProfileContainer, LinkMenu } from "./style";
+import { CardMenuContainer, LinkMenu } from "../../Menu/Card/style";
 
 export function CardProfile(){
-    return (<CardProfileContainer>
+    return (<CardMenuContainer>
         <LinkMenu className="link" href={"/accont/settings"}>
             Configurações
         </LinkMenu>
-    </CardProfileContainer>)
+    </CardMenuContainer>)
 }
