@@ -16,6 +16,6 @@ jobs:
           node-version: 18
           cache: 'npm'
       - name: install modules
-        run: npm ci
+        run: npm install
       - name: Run Eslint verify
         run: npm lint
