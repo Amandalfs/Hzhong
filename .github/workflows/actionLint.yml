@@ -18,4 +18,4 @@ jobs:
       - name: install modules
         run: npm install
       - name: Run Eslint verify
-        run: npm lint
+        run: npm run lint
