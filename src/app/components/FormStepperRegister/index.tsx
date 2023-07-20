@@ -20,7 +20,7 @@ import { FormTypeAccont } from './FormTypeAccont'
 
 export function FormStepperRegister(){
     const { activeStep, steps } = useContext(userRegisterContext);
-    const forms = [<FormAccont/>, <FormPersonal/>, <FormTypeAccont/>];
+    const forms = [<FormAccont key="formAccont" />, <FormPersonal key="formPersonal"/>, <FormTypeAccont key="formType"/>];
     
     return (<ContainerListForm>
         {
