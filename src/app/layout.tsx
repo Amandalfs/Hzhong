@@ -1,8 +1,5 @@
-'use client'
 import './globals.css'
 import { Poppins } from 'next/font/google'
-import { defaultTheme } from './styles/themes/DefaultTheme';
-import { ThemeProvider } from 'styled-components';
 import StyledComponentsRegistry from '@/lib/registry';
 import { ChakraProviders } from './providers/ChakraProvider';
 
@@ -23,11 +20,9 @@ export default function RootLayout({
     <html lang="pt-br">
       <ChakraProviders>
         <StyledComponentsRegistry>
-          <ThemeProvider theme={defaultTheme}>
             <body className={poppins.variable}>
                 {children}
             </body>
-          </ThemeProvider>
         </StyledComponentsRegistry>
       </ChakraProviders>
     </html>

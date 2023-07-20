@@ -18,8 +18,6 @@ import { userRegisterContext } from '@/app/contexts/userRegisterContext'
 import { FormPersonal } from './FormDataPersonal'
 import { FormTypeAccont } from './FormTypeAccont'
 
-
-
 export function FormStepperRegister(){
     const { activeStep, steps } = useContext(userRegisterContext);
     const forms = [<FormAccont/>, <FormPersonal/>, <FormTypeAccont/>];
