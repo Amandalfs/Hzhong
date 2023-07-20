@@ -7,7 +7,7 @@ import logoWhite from "../../../assets/logoWhite.png"
 
 export function HeaderHome(){
     return (<header className="flex flex-col">
-        <nav className="flex flex-row m-auto mt-2  lg:gap-0 justify-between lg:justify-between w-[90%]">
+        <nav className="flex flex-row m-auto mt-2 lg:justify-between w-[90%]">
             <div className="flex flex-row  gap-4 lg:gap-8">
                 <MarketPlaceMenu />
                 <ProfileMenu />
