@@ -2,11 +2,11 @@ import { CardMenuContainer, LinkMenu } from "../../Menu/Card/style";
 
 export function CardSignInSignUp(){
     return (<CardMenuContainer>
-        <LinkMenu href={"/signIn"}>
+        <LinkMenu href={"/signup"}>
             Cadastrar
         </LinkMenu>
 
-        <LinkMenu href={"/signUp"}>
+        <LinkMenu href={"/signin"}>
             Login
         </LinkMenu>
     </CardMenuContainer>)
