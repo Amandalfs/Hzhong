@@ -2,8 +2,6 @@
 import React, { useState } from 'react'
 import { useServerInsertedHTML } from 'next/navigation'
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components'
-import { defaultTheme } from '../app/styles/themes/DefaultTheme';
-import { ThemeProvider } from 'styled-components';
  
 export default function StyledComponentsRegistry({
   children,
@@ -21,8 +19,6 @@ export default function StyledComponentsRegistry({
   if (typeof window !== 'undefined') return <>{children}</>
  
   return (<StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
-      <ThemeProvider theme={defaultTheme}>
       {children}
-      </ThemeProvider>
     </StyleSheetManager>)
 }
