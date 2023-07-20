@@ -3,8 +3,6 @@ import { styled } from "styled-components";
 
 // className="flex  mtb-[15rem] gap-[15rem] bg-opacity-50 h-96"
 export const FooterContainer =  styled.footer`
-    display: flex;
-    flex-direction: row;
     padding: 4rem 15rem;
     background-image: url(/backgroundFooter.png);
     background-size: cover;
