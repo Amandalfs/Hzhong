@@ -5,8 +5,8 @@ export type IVariantButton = 'primary' | 'segundary'
 export type IVariantSize = 'small' | 'medium' | 'large'
 
 interface IButtonRadiusContainer {
-    variantButton: IVariantButton,
-    variantSize: IVariantSize,
+    $variantButton: IVariantButton,
+    $variantSize: IVariantSize,
 }
 
 const buttonSize = {
@@ -43,11 +43,11 @@ export const ButtonRadiusContainer = styled.button<IButtonRadiusContainer>`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: ${props => buttonVariant[props.variantButton].color};
-    background-color: ${props => buttonVariant[props.variantButton].background};
-    height: ${props => buttonSize[props.variantSize].height};
-    width: ${props => buttonSize[props.variantSize].width};
-    font-size: ${props => buttonSize[props.variantSize].fontSize};
+    color: ${props => buttonVariant[props.$variantButton].color};
+    background-color: ${props => buttonVariant[props.$variantButton].background};
+    height: ${props => buttonSize[props.$variantSize].height};
+    width: ${props => buttonSize[props.$variantSize].width};
+    font-size: ${props => buttonSize[props.$variantSize].fontSize};
     font-family: "Poppins";
     border-radius: 2rem;
     border: none;

@@ -5,8 +5,8 @@ export type VariantButton = 'primary' | 'segundary' | 'ranger' | 'success'
 export type VariantSize = 'small' | 'medium' | 'large'
 
 interface IVariants {
-    variantButton: VariantButton,
-    variantSize: VariantSize,
+    $variantButton: VariantButton,
+    $variantSize: VariantSize,
 }
 
 const variantColor = {
@@ -43,13 +43,13 @@ const variantSize = {
 }
 
 export const ButtonContainer = styled.button<IVariants>`
-    height: ${props => variantSize[props.variantSize].height};
-    width: ${props => variantSize[props.variantSize].width};
+    height: ${props => variantSize[props.$variantSize].height};
+    width: ${props => variantSize[props.$variantSize].width};
 
-    color: ${props => variantColor[props.variantButton].color};
-    font-size: ${props => variantColor[props.variantButton].size};
-    background: ${props => variantColor[props.variantButton].bg};
-    border: ${props => variantColor[props.variantButton].border};
+    color: ${props => variantColor[props.$variantButton].color};
+    font-size: ${props => variantColor[props.$variantButton].size};
+    background: ${props => variantColor[props.$variantButton].bg};
+    border: ${props => variantColor[props.$variantButton].border};
     border-radius: 8px;
 
     align-items: center;

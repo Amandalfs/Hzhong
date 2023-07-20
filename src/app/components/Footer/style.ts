@@ -6,7 +6,7 @@ export const FooterContainer =  styled.footer`
     display: flex;
     flex-direction: row;
     padding: 4rem 15rem;
-    background-image: url(../../../../backgroundFooter.png);
+    background-image: url(/backgroundFooter.png);
     background-size: cover;
     background-repeat: no-repeat;
 
