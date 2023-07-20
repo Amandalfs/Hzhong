@@ -9,7 +9,7 @@ import instagramLogo from "@/assets/networks/InstagramLogo.svg"
 import youtubeLogo from "@/assets/networks/YoutubeLogo.svg"
 
 export function Footer(){
-    return (<FooterContainer className="w-full h-[30rem] gap-[20rem]  items-center">
+    return (<FooterContainer className="flex flex-col w-full gap-[10rem]  lg:items-center lg:gap-[20rem] lg:flex-row">
         <div className="flex flex-col gap-4">
             <Image src={logo} alt="" />
             <p>264 Manon road F1 456 caron
