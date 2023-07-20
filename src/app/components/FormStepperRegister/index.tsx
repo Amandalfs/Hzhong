@@ -15,13 +15,18 @@ import { ContainerListForm } from './style'
 import { FormAccont } from './FormAccont'
 import { useContext } from 'react'
 import { userRegisterContext } from '@/app/contexts/userRegisterContext'
+import { FormPersonal } from './FormDataPersonal'
+
 
 
 export function FormStepperRegister(){
     const { activeStep, steps } = useContext(userRegisterContext);
+    const forms = [<FormAccont/>, <FormPersonal/>];
     
     return (<ContainerListForm>
-        <FormAccont />
+        {
+            forms[activeStep]
+        }
         <Stepper index={activeStep} orientation='vertical' height='200px' gap='0'>
             {steps.map((step, index) => (
             <Step key={index}>

@@ -7,6 +7,9 @@ interface IUserRegister {
     email: string
     password: string
     passwordConfirmation: string
+    name: string
+    cpf: string
+    nasc: string
 }
 
 function UserRegisterData(){
@@ -15,6 +18,9 @@ function UserRegisterData(){
         email: '',
         password: '',
         passwordConfirmation: '',
+        name: '',
+        cpf: '',
+        nasc: '',
     })
 
     const steps = [
