@@ -9,13 +9,10 @@ export interface IButtonRadius {
     typeButton?: 'button' | 'submit' | 'reset'
 }
 
-export function ButtonRadius({title, variantButton = 'primary', variantSize = 'medium', activeFunction, typeButton='button' }:IButtonRadius){
+export function ButtonRadius({title, variantButton = 'primary', variantSize = 'medium', activeFunction = (function(){}), typeButton='button' }:IButtonRadius){
     return (<ButtonRadiusContainer type={typeButton} variantButton={variantButton} variantSize={variantSize}
         onClick={()=>{
-            if(activeFunction){
-                activeFunction();
-            }
-            return;
+            activeFunction();
         }}
     >
         {title}
