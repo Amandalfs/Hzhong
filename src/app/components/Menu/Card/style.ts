@@ -5,8 +5,11 @@ import { styled } from "styled-components";
 
 export const  CardMenuContainer = styled.nav`
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; 
+    position: absolute;
+    justify-content: center;
+    right: -5rem;
+    top: -1rem;
     width: 10rem;
     padding: 0.75rem 0;
 
@@ -15,7 +18,6 @@ export const  CardMenuContainer = styled.nav`
     background: ${props => props.theme.colors.purple[50]};
     box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.10);
     gap: 0.5rem;
-
 `
 
 export const LinkMenu = styled(Link)`

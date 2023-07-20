@@ -1,7 +1,7 @@
 'use client'
 import { styled } from "styled-components";
 
-export const MenuContainer = styled.div`
+export const MenuContainer = styled.button`
     display: flex;
     flex-direction: column;
     align-items: center;
