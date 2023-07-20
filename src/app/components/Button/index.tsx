@@ -8,7 +8,7 @@ interface IButtonProps {
 }
 
 export function Button({variantButton='primary', variantSize='medium', title }:IButtonProps){
-    return <ButtonContainer variantButton={variantButton} variantSize={variantSize}>
+    return <ButtonContainer $variantButton={variantButton} $variantSize={variantSize}>
         {title}
     </ButtonContainer>
 }

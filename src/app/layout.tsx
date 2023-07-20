@@ -1,8 +1,6 @@
 import './globals.css'
 import { Poppins } from 'next/font/google'
-import StyledComponentsRegistry from '@/lib/registry';
-import { ChakraProviders } from './providers/ChakraProvider';
-import { StyledComponentsProvider } from './providers/StyledComponentsProvider';
+import { Providers } from './providers';
 
 const poppins = Poppins({ subsets: ['latin'], variable: '--font-poppins', weight: '500' });
 
@@ -19,15 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <ChakraProviders>
-        <StyledComponentsRegistry>
-          <StyledComponentsProvider>
-            <body className={poppins.variable}>
-                {children}
-            </body>
-          </StyledComponentsProvider>
-        </StyledComponentsRegistry>
-      </ChakraProviders>
+        <body className={poppins.variable}>
+          <Providers>
+            {children}
+          </Providers>
+        </body>
     </html>
   )
 }

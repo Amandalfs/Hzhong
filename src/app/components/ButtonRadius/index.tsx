@@ -10,7 +10,7 @@ export interface IButtonRadius {
 }
 
 export function ButtonRadius({title, variantButton = 'primary', variantSize = 'medium', activeFunction = (function(){}), typeButton='button' }:IButtonRadius){
-    return (<ButtonRadiusContainer type={typeButton} variantButton={variantButton} variantSize={variantSize}
+    return (<ButtonRadiusContainer type={typeButton} $variantButton={variantButton} $variantSize={variantSize}
         onClick={()=>{
             activeFunction();
         }}
