@@ -17,10 +17,11 @@ import { useContext } from 'react'
 import { userRegisterContext } from '@/app/contexts/userRegisterContext'
 import { FormPersonal } from './FormDataPersonal'
 import { FormTypeAccont } from './FormTypeAccont'
+import { ConfirmationCreateAccont } from './ConfirmationCreateAccont'
 
 export function FormStepperRegister(){
     const { activeStep, steps } = useContext(userRegisterContext);
-    const forms = [<FormAccont key="formAccont" />, <FormPersonal key="formPersonal"/>, <FormTypeAccont key="formType"/>];
+    const forms = [<FormAccont key="formAccont" />, <FormPersonal key="formPersonal"/>, <FormTypeAccont key="formType"/>, <ConfirmationCreateAccont key="confirmationAccont"/> ];
     
     return (<ContainerListForm>
         {
