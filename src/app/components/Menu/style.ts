@@ -1,20 +1,20 @@
 'use client'
 import { styled } from "styled-components";
 
-export const ProfileMenuContainer = styled.div`
+export const MenuContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 12rem;
     gap: 1rem;
 
     div {
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
         gap: 0.25rem;
 
-        img {
+        Image {
             height: 1.5rem;
             width: 1.5rem;
         }
