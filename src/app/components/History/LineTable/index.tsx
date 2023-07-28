@@ -8,6 +8,7 @@ interface IDataHistory {
   description: string
   date: string
   value: number
+  id: number
 }
 
 interface PropsLineTable {
@@ -15,9 +16,9 @@ interface PropsLineTable {
 }
 
 export function LineTable({ data }: PropsLineTable){
-    const { description, date, value } = data;
+    const { description, date, value, id } = data;
 
-    return (<TableRow sx={{border: 'none'}}>
+    return (<TableRow sx={{border: 'none'}} key={id}>
         <TableCell component="th" scope="row" sx={{border: 'none'}}>
           <Stack direction="row" gap={4} alignItems="flex-end">
 

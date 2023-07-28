@@ -12,26 +12,31 @@ import { LineTable } from "./LineTable";
 
 const dataHistory = [
   {
+    id: 1,
     description: "Compra de produtos",
     date: "2023-07-28",
     value: 100.50,
   },
   {
+    id: 2,
     description: "Pagamento de contas",
     date: "2023-07-27",
     value: -50.00,
   },
   {
+    id: 3,
     description: "Depósito bancário",
     date: "2023-07-26",
     value: 300.00,
   },
   {
+    id: 4,
     description: "Saque em caixa eletrônico",
     date: "2023-07-25",
     value: -80.00,
   },
   {
+    id: 5,
     description: "Pagamento de salário",
     date: "2023-07-24",
     value: 2000.00,
