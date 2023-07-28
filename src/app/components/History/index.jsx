@@ -58,8 +58,10 @@ export function History(){
           </TableHead>
           <TableBody>
               {
-                dataHistory.map(history =>
-                  (<LineTable data={history} />)
+                dataHistory.map(history => {
+                  const { id } = history; 
+                  return (<LineTable data={history} key={id} />)
+                }
                 )
               }
           </TableBody>
