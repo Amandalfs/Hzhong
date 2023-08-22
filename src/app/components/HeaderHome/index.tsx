@@ -4,6 +4,7 @@ import { SignInSignUpMenu } from "../SignSignUpMenu";
 import  Image  from 'next/image';
 
 import logoWhite from "../../../assets/logoWhite.png"
+import { MenuTransactions } from "../MenuTransactions";
 
 export function HeaderHome(){
     return (<header className="flex flex-col">
@@ -18,7 +19,7 @@ export function HeaderHome(){
         <div className="flex flex-row w-[90%] h-1 m-auto mt-2 mb-2 border-black-100 border-t-2 " ></div>
         <div className="flex flex-row w-[90%] m-auto justify-between items-center">
             <Image src={logoWhite} alt=""/>
-            <p>Menu de saque</p>
+            <MenuTransactions />
         </div>
     </header>)
 }
