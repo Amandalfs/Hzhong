@@ -19,7 +19,9 @@ export function HeaderHome(){
         <div className="flex flex-row w-[90%] h-1 m-auto mt-2 mb-2 border-black-100 border-t-2 " ></div>
         <div className="flex flex-row w-[90%] m-auto justify-between items-center">
             <Image src={logoWhite} alt=""/>
-            <MenuTransactions />
+            <div>
+                <MenuTransactions />
+            </div>
         </div>
     </header>)
 }
