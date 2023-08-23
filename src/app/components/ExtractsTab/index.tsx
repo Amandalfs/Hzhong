@@ -1,5 +1,6 @@
 "use client";
 import { Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
+import { ExtractsHistory } from './../ExtractsHistory/index';
 
 export function ExtractsTab(){
     return (<Tabs colorScheme="purple" position="relative" variant="unstyled">
@@ -15,9 +16,7 @@ export function ExtractsTab(){
     />
     <TabPanels>
     <TabPanel>
-        <div className="w-10/12">
-            table
-        </div>
+        <ExtractsHistory />
     </TabPanel>
     <TabPanel>
         <div>
