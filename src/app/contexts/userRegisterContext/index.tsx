@@ -2,7 +2,7 @@
 import { useSteps } from "@chakra-ui/stepper";
 import { createContext, useState } from "react";
 
-interface IUserRegister {
+export interface IUserRegister {
     username: string
     email: string
     password: string
@@ -10,6 +10,7 @@ interface IUserRegister {
     name: string
     cpf: string
     nasc: string
+    type: string
 }
 
 function UserRegisterData(){
@@ -21,6 +22,7 @@ function UserRegisterData(){
         name: '',
         cpf: '',
         nasc: '',
+        type: ''
     })
 
     const steps = [
