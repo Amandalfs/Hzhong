@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { defaultTheme } from "@/app/styles/themes/DefaultTheme";
 
-export type IVariantButton = 'primary' | 'segundary'
-export type IVariantSize = 'small' | 'medium' | 'large'
+export type IVariantButton = "primary" | "segundary"
+export type IVariantSize = "small" | "medium" | "large"
 
 interface IButtonRadiusContainer {
     $variantButton: IVariantButton,
@@ -10,33 +10,33 @@ interface IButtonRadiusContainer {
 }
 
 const buttonSize = {
-    small: {
-        height: "1rem",
-        width: "3.5rem",
-        fontSize: "0.5rem"
-    },
-    medium: {
-        height: "2rem",
-        width: "7rem",
-        fontSize: "1rem"
-    },
-    large: {
-        height: "3rem",
-        width: "11rem",
-        fontSize: "1.5rem"
-    }
-}
+	small: {
+		height: "1rem",
+		width: "3.5rem",
+		fontSize: "0.5rem"
+	},
+	medium: {
+		height: "2rem",
+		width: "7rem",
+		fontSize: "1rem"
+	},
+	large: {
+		height: "3rem",
+		width: "11rem",
+		fontSize: "1.5rem"
+	}
+};
 
 const buttonVariant = {
-    primary: {
-        color: defaultTheme.colors.pink[50],
-        background: defaultTheme.colors.purple[700]
-    },
-    segundary: {
-        color: defaultTheme.colors.purple[700],
-        background: defaultTheme.colors.pink[100]
-    }
-}
+	primary: {
+		color: defaultTheme.colors.pink[50],
+		background: defaultTheme.colors.purple[700]
+	},
+	segundary: {
+		color: defaultTheme.colors.purple[700],
+		background: defaultTheme.colors.pink[100]
+	}
+};
 
 export const ButtonRadiusContainer = styled.button<IButtonRadiusContainer>`
     display: flex;
@@ -57,4 +57,4 @@ export const ButtonRadiusContainer = styled.button<IButtonRadiusContainer>`
         transform: scale(1.05);
         transition: 0.5s;
     }
-`
+`;

@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useSteps } from "@chakra-ui/stepper";
 import { createContext, useState } from "react";
 
@@ -14,35 +14,35 @@ export interface IUserRegister {
 }
 
 function UserRegisterData(){
-    const [userRegister, setUserRegister] = useState<IUserRegister>({
-        username: '',
-        email: '',
-        password: '',
-        passwordConfirmation: '',
-        name: '',
-        cpf: '',
-        nasc: '',
-        type: ''
-    })
+	const [userRegister, setUserRegister] = useState<IUserRegister>({
+		username: "",
+		email: "",
+		password: "",
+		passwordConfirmation: "",
+		name: "",
+		cpf: "",
+		nasc: "",
+		type: ""
+	});
 
-    const steps = [
-        { title: '1 passo', description: 'Criar conta' },
-        { title: '2 passo', description: 'Dados pessoais' },
-        { title: '3 passo', description: 'Tipo de conta' },
-    ]
+	const steps = [
+		{ title: "1 passo", description: "Criar conta" },
+		{ title: "2 passo", description: "Dados pessoais" },
+		{ title: "3 passo", description: "Tipo de conta" },
+	];
     
-    const { activeStep, goToNext } = useSteps({
-        index: 0,
-        count: steps.length,
-    })
+	const { activeStep, goToNext } = useSteps({
+		index: 0,
+		count: steps.length,
+	});
 
-    return {
-        userRegister,
-        setUserRegister,
-        activeStep,
-        goToNext,
-        steps,
-    }
+	return {
+		userRegister,
+		setUserRegister,
+		activeStep,
+		goToNext,
+		steps,
+	};
 }
 
 interface IStep {
@@ -62,7 +62,7 @@ export const userRegisterContext = createContext({} as IUserRegisterContext);
 
 
 export function UserRegisterContextProvider({children}){
-    return (<userRegisterContext.Provider value={UserRegisterData()}>
-        {children}
-    </userRegisterContext.Provider>)
+	return (<userRegisterContext.Provider value={UserRegisterData()}>
+		{children}
+	</userRegisterContext.Provider>);
 }

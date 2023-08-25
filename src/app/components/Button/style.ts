@@ -1,8 +1,8 @@
 import { defaultTheme } from "@/app/styles/themes/DefaultTheme";
 import { styled } from "styled-components";
 
-export type VariantButton = 'primary' | 'segundary' | 'ranger' | 'success'
-export type VariantSize = 'small' | 'medium' | 'large'
+export type VariantButton = "primary" | "segundary" | "ranger" | "success"
+export type VariantSize = "small" | "medium" | "large"
 
 interface IVariants {
     $variantButton: VariantButton,
@@ -10,37 +10,37 @@ interface IVariants {
 }
 
 const variantColor = {
-    primary: {
-        color: defaultTheme.colors.black[50], 
-        bg: defaultTheme.colors.purple[600],
-        border: 'none'
-    },
-    segundary: {
-        color: defaultTheme.colors.purple[100], 
-        bg: defaultTheme.colors.black[50],
-        border: `2px solid ${defaultTheme.colors.purple[300]}`
-    }
-}
+	primary: {
+		color: defaultTheme.colors.black[50], 
+		bg: defaultTheme.colors.purple[600],
+		border: "none"
+	},
+	segundary: {
+		color: defaultTheme.colors.purple[100], 
+		bg: defaultTheme.colors.black[50],
+		border: `2px solid ${defaultTheme.colors.purple[300]}`
+	}
+};
 
 
 
 const variantSize = {
-    small: {
-        width: '5.625rem',
-        height: '2rem',
-        size: '0.5rem',
-    },
-    medium: {
-        width: '5.125rem',
-        height: '2.5rem',
-        size: '1rem',
-    },
-    large: {
-        width: '4.625rem',
-        height: '3rem',
-        size: '1.5rem',
-    }
-}
+	small: {
+		width: "5.625rem",
+		height: "2rem",
+		size: "0.5rem",
+	},
+	medium: {
+		width: "5.125rem",
+		height: "2.5rem",
+		size: "1rem",
+	},
+	large: {
+		width: "4.625rem",
+		height: "3rem",
+		size: "1.5rem",
+	}
+};
 
 export const ButtonContainer = styled.button<IVariants>`
     height: ${props => variantSize[props.$variantSize].height};
