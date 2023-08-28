@@ -5,14 +5,14 @@ import { ButtonRadius } from "../ButtonRadius";
 import { MenuContainer } from "../Menu/style";
 
 export function MenuTransactions(){
-    const { isOpen, onToggle } = useDisclosure();
+	const { isOpen, onToggle } = useDisclosure();
 
-    return (<MenuContainer>
-        <ButtonRadius title="Menu" activeFunction={onToggle} />
-        <div className="relative">
-            <Collapse in={isOpen} animateOpacity>
-                <CardTransactions />
-            </Collapse>
-        </div>
-    </MenuContainer>)
+	return (<MenuContainer>
+		<ButtonRadius title="Menu" activeFunction={onToggle} />
+		<div className="relative">
+			<Collapse in={isOpen} animateOpacity>
+				<CardTransactions />
+			</Collapse>
+		</div>
+	</MenuContainer>);
 }
