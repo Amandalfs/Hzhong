@@ -7,19 +7,17 @@ import  Image  from "next/image";
 import logoWhite from "../../../assets/logoWhite.png";
 import { MenuTransactions } from "../MenuTransactions";
 import { LoggerdInMenu } from "./LoggedInMenu";
-import { isValidCookie } from "@/app/utils/isValidCookie";
-import { useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
+import { CookiesContext } from "@/app/contexts/cookiesContext";
+import { useCookies } from "@/app/hooks/cookiesHook";
 
 export function HeaderHome(){
-	const [isAuthenticated, setIsAutenticated] = useState(false);
-
-	async function validCookie(){
-		const cookie = await isValidCookie("token");
-		setIsAutenticated(cookie);
-	}
+	const { cookies } = useContext(CookiesContext);
+	const isAuthenticated = cookies.token;
+	const { getCookie } = useCookies();
 
 	useEffect(()=>{
-		validCookie();
+		getCookie("token");
 	},[]);
 
 	return (<header className="flex flex-col">
@@ -29,7 +27,7 @@ export function HeaderHome(){
 				<ProfileMenu />
 			</div>
             
-			{isAuthenticated?<LoggerdInMenu />:<SignInSignUpMenu />}
+			{isAuthenticated ?<LoggerdInMenu />:<SignInSignUpMenu />}
 		</nav>
 		<div className="flex flex-row w-[90%] h-1 m-auto mt-2 mb-2 border-black-100 border-t-2 " ></div>
 		<div className="flex flex-row w-[90%] m-auto justify-between items-center">
