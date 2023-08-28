@@ -21,11 +21,11 @@ interface ICookieContext {
     setCookies: (data: ICookie) => void
 }
 
-export const userRegisterContext = createContext({} as ICookieContext);
+export const CookiesContext = createContext({} as ICookieContext);
 
 
-export function UserRegisterContextProvider({children}){
-	return (<userRegisterContext.Provider value={RegisterCookiesData()}>
+export function CookiesContextProvider({children}){
+	return (<CookiesContext.Provider value={RegisterCookiesData()}>
 		{children}
-	</userRegisterContext.Provider>);
+	</CookiesContext.Provider>);
 }
