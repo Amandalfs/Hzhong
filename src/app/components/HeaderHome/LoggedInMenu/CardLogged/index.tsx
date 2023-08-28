@@ -1,7 +1,9 @@
-// import { deleteCookie } from "@/app/utils/deleteCookie";
+"use client";
+import { useCookies } from "@/app/hooks/cookiesHook";
 import { CardMenuContainer, LinkMenu } from "@/components/Menu/Card/style";
 
 export function CardLogged(){
+	const { deleteCookie } = useCookies();
 	return (<CardMenuContainer>
 		<LinkMenu href={"/dashboard"}>
             Dashboard
@@ -9,7 +11,7 @@ export function CardLogged(){
 
 		<LinkMenu href={"/"} onClick={
 			()=> {
-				// deleteCookie("token");
+				deleteCookie("token");
 			}
 		}>
             Logout
