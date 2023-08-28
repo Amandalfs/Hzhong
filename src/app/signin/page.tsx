@@ -8,7 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Input } from "@chakra-ui/react";
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { isValidCookie } from "../utils/isValidCookie";
 
@@ -51,7 +51,7 @@ function SignIn(){
     		}
     	})();
     	
-    },[]);
+    },[router]);
 
     return (<main>
     	<HeaderHome />
