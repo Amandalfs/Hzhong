@@ -25,12 +25,11 @@ export function DepositForm(){
     const { register, handleSubmit, reset, watch } = useForm<IDataDepositValidSchema>({
     	resolver: zodResolver(dataDepositValidSchema),
     	defaultValues: {
-    		deposit: 100,
+    		deposit: 1,
     	}  
     });
 
     async function executeDeposit(data: IDataDepositValidSchema){
-    	console.log("entrou", data);
     	try {
     		const result = await apiHzhong.patch("/transactions/deposit", {
     			deposit: data.deposit
@@ -42,7 +41,6 @@ export function DepositForm(){
     		toast.success(result.data.params.descricao);
     		reset();
     	} catch (error) {
-    		console.error("Axios error", error);
     		toast.error("Error depositing. Please try again later.");
     	}
 
