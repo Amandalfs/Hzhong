@@ -24,7 +24,12 @@ export async  function POST(request: NextRequest){
 		});
 
 	} catch (error) {
-		console.log(error);
+		if(error.response.data){
+			return new Response(JSON.stringify({error: error.response.data}),{ 
+				status: error.response.status,
+				headers: { "Content-Type": "application/json" },
+			});
+		}
 		return new Response(JSON.stringify({ error: "Login failed" }), {
 			status: 401,
 			headers: { "Content-Type": "application/json" },

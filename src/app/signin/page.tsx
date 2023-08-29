@@ -47,8 +47,10 @@ function SignIn(){
     		router.push("/dashboard");
 
     	} catch (error) {
-    		console.log("Error AXIOS", error);
-    		toast.error(error.response.data);
+    		if(error.response.data.error.msg){
+    			return toast.error(error.response.data.error.msg);
+    		}
+    		toast.error("Internal Server Error");
     	}
     }
 	
