@@ -14,8 +14,6 @@ import { useCookies } from "../hooks/cookiesHook";
 import { CookiesContext } from "@/contexts/cookiesContext";
 
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
 
 function SignIn(){
 	const router = useRouter();
