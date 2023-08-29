@@ -53,14 +53,14 @@ export function DepositForm(){
     	<form className="flex flex-col gap-8" onSubmit={handleSubmit(executeDeposit)}>
     	<div className="flex flex-col gap-2">
     		<div className="flex gap-2">
-    			{/* <Image src={stroke} alt="" /> */}
+    			<Image src={stroke} alt="" />
     			<h1 className="text-purple-700 text-3xl font-sans font-bold">Depositar</h1>
     		</div>
     		<h2 className="text-[#84DA97] text-base font-sans">Saldo da conta</h2>
     		<h1 className="text-blue-950 text-2xl font-sans font-bold">$4,500,093.00</h1>
     	</div>
     	<Input placeholder='Valor de deposito' 
-    		size='sm' type="" 
+    		size='sm' type="number" 
     		isRequired={true} 
     		width="xs" 	 
     		{...register("deposit")}
