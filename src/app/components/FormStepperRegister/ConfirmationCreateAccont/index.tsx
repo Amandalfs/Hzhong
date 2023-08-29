@@ -29,8 +29,10 @@ export function ConfirmationCreateAccont(){
 			});
 			router.push("/signin");
 		} catch (error) {
-			console.log(error);
-			toast.error(error.response.data);
+			if(error.response.data.error.msg){
+				return toast.error(error.response.data.error.msg);
+			}
+			toast.error("Internal Server Error");
 		}
 	}
 
