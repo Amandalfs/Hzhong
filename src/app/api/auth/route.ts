@@ -13,8 +13,7 @@ export async  function POST(request: NextRequest){
 		const { params } = response.data;
 		const { token } = params;
 
-
-		const cookiesExpiresInSeconds = 60 * 60 * 24 * 7;
+		const cookiesExpiresInSeconds = 60 * 60 * 8;
 
 		const redirectURL = new URL("/dashboard", request.url);
 
@@ -25,6 +24,7 @@ export async  function POST(request: NextRequest){
 		});
 
 	} catch (error) {
+		console.log(error);
 		return new Response(JSON.stringify({ error: "Login failed" }), {
 			status: 401,
 			headers: { "Content-Type": "application/json" },

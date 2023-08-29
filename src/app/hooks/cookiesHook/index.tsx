@@ -9,6 +9,7 @@ export function useCookies(){
 	function getCookie(name: string){
 		const value = Cookies.get(name);
 		setCookies({[name]: value});
+		return value;
 	}
 
 	function deleteCookie(name: string): void{
