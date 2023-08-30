@@ -38,6 +38,7 @@ export function WithdrawForm(){
     				Authorization: `Bearer ${cookies.token}`
     			}
     		});
+    		updateStaticHistory(cookies.token);
     		toast.success(result.data.params.extratoNew.descricao);
     		reset();
     	} catch (error) {
