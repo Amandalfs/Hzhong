@@ -33,16 +33,17 @@ function UserStaticHistoryContextRegisterData(){
 					Authorization: `Bearer ${token}`
 				}
 			});
+			console.log("axios error money", response);
 
 			setUserStatic({
-				balance: response.data.userSend.saldo,
-				username: response.data.userSend.username,
+				balance: response.data.params.userSend.saldo,
+				username: response.data.params.userSend.username,
 				BalanceInput: 0,
 				BalanceOutput: 0,
 			});
-			setUserExtracts(response.data.extracts);
+			setUserExtracts(response.data.params.extracts);
 		} catch (error) {
-			
+			console.log(error);
 		}
 	}
 
