@@ -1,5 +1,6 @@
 "use client";
 import { createContext, useState } from "react";
+import { apiHzhong } from "./../../services/api";
 
 export interface IUserRegister {
     username: string
@@ -25,8 +26,24 @@ function UserStaticHistoryContextRegisterData(){
 
 	const [userExtracts, setUserExtracts] = useState<IExtractsStatic[]>([]);
 
-	async function updateStaticHistory(){
-        
+	async function updateStaticHistory(token: string){
+		try {
+			const response = await apiHzhong.get("/users/show",{
+				headers: {
+					Authorization: `Bearer ${token}`
+				}
+			});
+
+			setUserStatic({
+				balance: response.data.userSend.saldo,
+				username: response.data.userSend.username,
+				BalanceInput: 0,
+				BalanceOutput: 0,
+			});
+			setUserExtracts(response.data.extracts);
+		} catch (error) {
+			
+		}
 	}
 
 	return {
@@ -44,7 +61,7 @@ interface IUserStaticHistoryContext {
     setUserStatic: (data:IUserRegister) => void,
     userExtracts:  IExtractsStatic[],
     setUserExtracts: (data: IExtractsStatic[]) => void,
-    updateStaticHistory: () => void,
+    updateStaticHistory: (token: string) => void,
 }
 
 export const userStaticHistoryContext = createContext({} as IUserStaticHistoryContext);
