@@ -3,6 +3,7 @@ import { ChakraProviders } from "./ChakraProvider";
 import { StyledComponentsProvider } from "./StyledComponentsProvider";
 import ThemeRegistry from "./MuiProvider";
 import { CookiesContextProvider } from "../contexts/cookiesContext";
+import { UserStaticHistoryContextProvider } from "../contexts/userStaticHistoryContext";
 
 export function Providers({children}){
 	return (<ThemeRegistry options={{ key: "mui" }}>
@@ -10,7 +11,9 @@ export function Providers({children}){
 			<StyledComponentsRegistry>
 				<StyledComponentsProvider>
 					<CookiesContextProvider>
-						{children}
+						<UserStaticHistoryContextProvider>
+							{children}
+						</UserStaticHistoryContextProvider>
 					</CookiesContextProvider>
 				</StyledComponentsProvider>
 			</StyledComponentsRegistry>

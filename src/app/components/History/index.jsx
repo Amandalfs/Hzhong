@@ -7,6 +7,8 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Link from "next/link";
 import { LineTable } from "./LineTable";
+import { useContext } from "react";
+import { userStaticHistoryContext } from "@/app/contexts/userStaticHistoryContext";
 
 const dataHistory = [
 	{
@@ -42,6 +44,8 @@ const dataHistory = [
 ];
 
 export function History(){
+	const { userExtracts } = useContext(userStaticHistoryContext);
+
 	return (<TableContainer>
 		<Table  sx={{ width: "34rem"}}>
 			<TableHead>
@@ -56,9 +60,14 @@ export function History(){
 			</TableHead>
 			<TableBody>
 				{
-					dataHistory.map(history => {
-						const { id } = history; 
-						return (<LineTable data={history} key={id} />);
+					userExtracts.map(history => {
+						const id = history.length;
+						return (<LineTable data={{
+							id,
+							date: history.data,
+							description: history.descricao,
+							value: Number(history.saldo)
+						}} key={id} />);
 					}
 					)
 				}
