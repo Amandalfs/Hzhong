@@ -1,4 +1,4 @@
-"use cleint";
+"use client";
 import Image from "next/image";
 import { HeaderHome } from "@/app/components/HeaderHome/index";
 import background from "@/assets/transactions/TransctionsBackground.png";
