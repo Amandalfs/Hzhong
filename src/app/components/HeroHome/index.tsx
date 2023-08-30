@@ -23,17 +23,29 @@ export function HeroHome(){
                     Suas <span className="text-purple-700 font-extrabold">Finanças</span>
 				</h1>
 				<div className="flex flex-row gap-4">
-					<ButtonRadius title="Criar sua conta" variantButton="primary" variantSize="large" />
-					<ButtonRadius title="Checar Saldo" variantButton="segundary" variantSize="large" />
+					<Link href={"/signup"}>
+						<ButtonRadius title="Criar sua conta" variantButton="primary" variantSize="large" />
+					</Link>
+					<Link href={"/dashboard"}>
+						<ButtonRadius title="Checar Saldo" variantButton="segundary" variantSize="large" />
+					</Link>
 				</div>
 			</div>
 		</div>
 		<div className="flex flex-row h-[29rem] justify-center relative">
 			<div className="flex flex-row absolute gap-10 bottom-2/3 ">
-				<Card imgUrl={TransferIcon} title="Transfirir Dinheiro" />
-				<Card imgUrl={withdrawIcon} title="Sacar" />
-				<Card imgUrl={DepositIcon} title="Deposita" />
-				<Card imgUrl={PayIcon} title="Pagamentos Online" />
+				<Link href={"/transactions/transferMoney"}>
+					<Card imgUrl={TransferIcon} title="Transfirir Dinheiro" />
+				</Link>
+				<Link href={"/transactions/withdraw"}>
+					<Card imgUrl={withdrawIcon} title="Sacar" />
+				</Link>
+				<Link href={"/transactions/withdraw"}>
+					<Card imgUrl={DepositIcon} title="Deposita" />
+				</Link>
+				<Link href={"/transactions/payto"}>
+					<Card imgUrl={PayIcon} title="Pagamentos Online" />
+				</Link>
 			</div>
 		</div>
 	</section>);
