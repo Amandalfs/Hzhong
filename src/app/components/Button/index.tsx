@@ -11,8 +11,8 @@ interface IButtonProps {
 export function Button({variantButton="primary", variantSize="medium", title, activeFunction=()=>{} }:IButtonProps){
 	return <ButtonContainer $variantButton={variantButton} $variantSize={variantSize}
 		onClick={(e)=>{
-            e.stopPropagation();
-            e.preventDefault();
+			e.stopPropagation();
+			e.preventDefault();
 			activeFunction();
 		}}>
 		{title}

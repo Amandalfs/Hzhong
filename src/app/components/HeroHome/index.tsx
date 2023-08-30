@@ -6,13 +6,16 @@ import withdrawIcon from "@/assets/transactions/icons/withdrawIcon.svg";
 import DepositIcon from "@/assets/transactions/icons/depositIcon.svg";
 import TransferIcon from "@/assets/transactions/icons/transferIcon.svg";
 import PayIcon from "@/assets/transactions/icons/payIcon.svg";
+import Link from "next/link";
 
 export function HeroHome(){
 	return (<section>
 		<div className="flex flex-col h-[44.25rem] bg-hero bg-cover mt-3">
 			<div className="flex flex-col ml-72 mt-44 gap-4">
 				<div>
-					<Image src="" alt=""/>
+					<Link href={"/"}>
+						<Image src="" alt=""/>
+					</Link>
 					<h2 className="text-purple-700 font-sans font-semibold text-2xl ">Boas Vindas a Hzhong</h2>
 				</div>
 				<h1 className="text-5xl w-96">
