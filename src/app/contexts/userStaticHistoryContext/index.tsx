@@ -3,7 +3,6 @@ import { createContext, useState } from "react";
 import { apiHzhong } from "./../../services/api";
 
 export interface IUserRegister {
-    username: string
     balance: number
     BalanceOutput: number
     BalanceInput: number
@@ -18,7 +17,6 @@ export interface IExtractsStatic {
 
 function UserStaticHistoryContextRegisterData(){
 	const [userStatic, setUserStatic] = useState<IUserRegister>({
-		username: "",
 		balance: 0,
 		BalanceInput: 0,
 		BalanceOutput: 0,
@@ -33,11 +31,9 @@ function UserStaticHistoryContextRegisterData(){
 					Authorization: `Bearer ${token}`
 				}
 			});
-			console.log("axios error money", response);
 
 			setUserStatic({
 				balance: response.data.params.userSend.saldo,
-				username: response.data.params.userSend.username,
 				BalanceInput: 0,
 				BalanceOutput: 0,
 			});
