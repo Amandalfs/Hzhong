@@ -2,9 +2,7 @@
 import { createContext, useState } from "react";
 
 export interface ICookie {
-    [key: string]: {
-        value: string,
-    },
+    [key: string]: string
 }
 
 function RegisterCookiesData(){

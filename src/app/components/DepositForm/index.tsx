@@ -12,13 +12,14 @@ import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import { CookiesContext } from "@/app/contexts/cookiesContext";
 import { useContext } from "react";
+import { userStaticHistoryContext } from "@/contexts/userStaticHistoryContext";
 
 export function DepositForm(){
 	const { cookies } = useContext(CookiesContext);
+	const { userStatic, updateStaticHistory } = useContext(userStaticHistoryContext);
 	const dataDepositValidSchema = zod.object({
 		deposit: zod.coerce.number()
 	});
-
     
     type IDataDepositValidSchema = zod.infer<typeof  dataDepositValidSchema>
 
@@ -38,6 +39,8 @@ export function DepositForm(){
     				Authorization: `Bearer ${cookies.token}`
     			}
     		});
+
+    		updateStaticHistory(cookies.token);
     		toast.success(result.data.params.descricao);
     		reset();
     	} catch (error) {
@@ -55,7 +58,7 @@ export function DepositForm(){
     			<h1 className="text-purple-700 text-3xl font-sans font-bold">Depositar</h1>
     		</div>
     		<h2 className="text-[#84DA97] text-base font-sans">Saldo da conta</h2>
-    		<h1 className="text-blue-950 text-2xl font-sans font-bold">$4,500,093.00</h1>
+    		<h1 className="text-blue-950 text-2xl font-sans font-bold">${Number(userStatic.balance).toFixed(2).replace(".", ",")}</h1>
     	</div>
     	<Input placeholder='Valor de deposito' 
     		size='sm' type="number" 
