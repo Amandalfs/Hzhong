@@ -1,9 +1,12 @@
 "use client";
 import { VictoryPie, VictoryLabel } from "victory";
+import { useContext } from "react";
+import { userStaticHistoryContext } from "@/app/contexts/userStaticHistoryContext";
 
 export function GraficStatics(){
-	const incomeValue = 1000;
-	const expenseValue = 900;
+	const { userStatic } = useContext(userStaticHistoryContext);
+	const incomeValue = userStatic.BalanceInput;
+	const expenseValue = userStatic.BalanceOutput;
   
 	const netIncome = incomeValue - expenseValue;
 	const netIncomePercentage = (netIncome / incomeValue) * 100;

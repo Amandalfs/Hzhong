@@ -32,10 +32,16 @@ function UserStaticHistoryContextRegisterData(){
 				}
 			});
 
+			const { data } = await apiHzhong.get("/users/metrics", {
+				headers: {
+					Authorization: `Bearer ${token}`
+				}
+			});
+
 			setUserStatic({
 				balance: response.data.params.userSend.saldo,
-				BalanceInput: 0,
-				BalanceOutput: 0,
+				BalanceInput: data.params.monthlyIncome,
+				BalanceOutput: data.params.monthlyExpenses,
 			});
 			setUserExtracts(response.data.params.extracts);
 		} catch (error) {
