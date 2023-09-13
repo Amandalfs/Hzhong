@@ -35,12 +35,15 @@ export function FormPersonal(){
     return (<FormPersonalContainer onSubmit={handleSubmit(handleSuccess)}>
     	<Input placeholder='Nome Completo' size='sm' isRequired={true} 
     		{...register("name")}
+			helperText={errors.name && errors.name.message ? errors.name.message : ""}
     	/>
     	<Input placeholder='Cpf' size='sm' isRequired={true}
     		{...register("cpf")}
+			helperText={errors.cpf && errors.cpf.message ? errors.cpf.message : ""}
     	/>
     	<Input placeholder='Data de nascimento' size='sm' type="text" isRequired={true}
     		{...register("nasc")}
+			helperText={errors.cpf && errors.cpf.message ? errors.cpf.message : ""}
     	/>
     	<ButtonRadius variantSize="large" title="Proximo" typeButton="submit"/>
     </FormPersonalContainer>);

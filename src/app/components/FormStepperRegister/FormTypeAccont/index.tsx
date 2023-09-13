@@ -70,6 +70,7 @@ export function FormTypeAccont(){
     	</TableContainer>
     	<Select placeholder='Tipo da conta' size='sm' isRequired={true} 
     		{...register("type")}
+			helperText={errors.type && errors.type.message ? errors.type.message : ""}
     	>
     		<option value="poupanca">Poupança</option>
     		<option value="universitaria">Universitaria</option>

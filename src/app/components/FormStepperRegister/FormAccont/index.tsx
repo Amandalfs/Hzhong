@@ -36,19 +36,23 @@ export function FormAccont(){
     	setUserRegister({...userRegister, ...data});
     	goToNext();
     }
-
+	
     return (<FormAccontContainer onSubmit={handleSubmit(handleSuccess)}>
     	<Input placeholder='Username' size='sm' isRequired={true} 
     		{...register("username")}
+			helperText={errors.username && errors.username.message ? errors.username.message : ""}
     	/>
     	<Input placeholder='Email' size='sm' isRequired={true}
     		{...register("email")}
+			helperText={errors.email && errors.email.message ? errors.email.message : ""}
     	/>
     	<Input placeholder='Senha' size='sm' type="password" isRequired={true}
     		{...register("password")}
+			helperText={errors.password && errors.password.message ? errors.password.message : ""}
     	/>
     	<Input placeholder='Confirmar Senha' size='sm' type="password" isRequired={true}
     		{...register("passwordConfirmation")}
+			helperText={errors.passwordConfirmation && errors.passwordConfirmation.message ? errors.passwordConfirmation.message : ""}
     	/>
     	<ButtonRadius variantSize="large" title="Proximo" typeButton="submit"/>
     </FormAccontContainer>);
