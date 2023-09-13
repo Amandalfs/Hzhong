@@ -1,4 +1,6 @@
 "use client";
+import { graficExtractsContext } from "@/app/contexts/graficExtractsContext/graficExtractsContext";
+import { useContext } from "react";
 import { VictoryPie } from "victory";
 
 const totalData = [
@@ -7,6 +9,9 @@ const totalData = [
 ];
 
 export function Pizza(){
+	const { graficPizza } = useContext(graficExtractsContext);
+	totalData[0].y = graficPizza.incomes;
+	totalData[0].y = graficPizza.expenses;
 	return (
 		<div>
 			<VictoryPie
