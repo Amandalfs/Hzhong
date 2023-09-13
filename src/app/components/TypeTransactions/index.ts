@@ -20,7 +20,7 @@ export const TypeTransactions = styled.span<StatusProps>`
         height: 0.5rem;
         border-radius: 50%;
         background: ${(props) => 
-            `${STATUS_COLORS[props.statusColor]}`
-        }
+		`${STATUS_COLORS[props.statusColor]}`
+}
     }
 `;
