@@ -5,6 +5,7 @@ import ThemeRegistry from "./MuiProvider";
 import { CookiesContextProvider } from "../contexts/cookiesContext";
 import { UserStaticHistoryContextProvider } from "../contexts/userStaticHistoryContext";
 import { UserInfosContextProvider } from "../contexts/userInfosContext";
+import { ExtractsContextProvider } from "../contexts/extractsContext/extractsContext";
 
 export function Providers({children}){
 	return (<ThemeRegistry options={{ key: "mui" }}>
@@ -14,7 +15,9 @@ export function Providers({children}){
 					<CookiesContextProvider>
 						<UserStaticHistoryContextProvider>
 							<UserInfosContextProvider>
-								{children}
+								<ExtractsContextProvider>
+									{children}
+								</ExtractsContextProvider>
 							</UserInfosContextProvider>
 						</UserStaticHistoryContextProvider>
 					</CookiesContextProvider>
