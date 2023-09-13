@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Input } from "@chakra-ui/react";
+import { Input, FormControl, FormErrorMessage } from "@chakra-ui/react";
 import { ButtonRadius } from "../../ButtonRadius";
 import { FormPersonalContainer } from "./style";
 import { userRegisterContext } from "@/app/contexts/userRegisterContext";
@@ -33,18 +33,41 @@ export function FormPersonal(){
     }
 
     return (<FormPersonalContainer onSubmit={handleSubmit(handleSuccess)}>
-    	<Input placeholder='Nome Completo' size='sm' isRequired={true} 
-    		{...register("name")}
-			helperText={errors.name && errors.name.message ? errors.name.message : ""}
-    	/>
-    	<Input placeholder='Cpf' size='sm' isRequired={true}
-    		{...register("cpf")}
-			helperText={errors.cpf && errors.cpf.message ? errors.cpf.message : ""}
-    	/>
-    	<Input placeholder='Data de nascimento' size='sm' type="text" isRequired={true}
-    		{...register("nasc")}
-			helperText={errors.cpf && errors.cpf.message ? errors.cpf.message : ""}
-    	/>
+
+    	<FormControl isInvalid={Boolean(errors.name)}>
+    		<Input placeholder='Nome Completo' size='sm' isRequired={true} 
+    			{...register("name")}
+    		/>
+    		{ 
+    			errors.name && errors.name.message && <FormErrorMessage>
+    				{ errors.name.message}
+    			</FormErrorMessage> 
+    		}
+    	</FormControl>
+
+    	<FormControl isInvalid={Boolean(errors.name)}>
+    		<Input placeholder='Cpf' size='sm' isRequired={true}
+    			{...register("cpf")}
+    		/>
+    		{
+    			errors.cpf && errors.cpf.message && <FormErrorMessage>
+    				{ errors.cpf.message }
+    			</FormErrorMessage>
+    		}
+    	</FormControl>
+
+    	<FormControl>
+    		<Input placeholder='Data de nascimento' size='sm' type="text" isRequired={true}
+    			{...register("nasc")}
+    		/>
+    		{
+    			errors.cpf && errors.cpf.message && <FormErrorMessage>
+    				{ errors.cpf.message }
+    			</FormErrorMessage>
+    		}
+    	</FormControl>
+	
     	<ButtonRadius variantSize="large" title="Proximo" typeButton="submit"/>
+
     </FormPersonalContainer>);
 }

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Input } from "@chakra-ui/react";
+import { FormControl, FormErrorMessage, Input } from "@chakra-ui/react";
 import { ButtonRadius } from "../../ButtonRadius";
 import { FormAccontContainer } from "./style";
 import { userRegisterContext } from "@/app/contexts/userRegisterContext";
@@ -15,45 +15,76 @@ export function FormAccont(){
 		password: zod.string().min(8, "Preencha todos os campos").max(24,),
 		passwordConfirmation: zod.string().min(8, "Preencha todos os campos").max(24),
 	});
-    
-    type IDataAccontValidSchema = zod.infer<typeof  dataAccontValidSchema>
+		
+		type IDataAccontValidSchema = zod.infer<typeof  dataAccontValidSchema>
 
-    const { register, handleSubmit, formState: { errors } } = useForm<IDataAccontValidSchema>({
-    	resolver: zodResolver(dataAccontValidSchema),
-    	defaultValues: {
-    		username: "",
-    		email: "",
-    		password: "",
-    		passwordConfirmation: "",
-    	}       
-    });
+		const { register, handleSubmit, formState: { errors } } = useForm<IDataAccontValidSchema>({
+			resolver: zodResolver(dataAccontValidSchema),
+			defaultValues: {
+				username: "",
+				email: "",
+				password: "",
+				passwordConfirmation: "",
+			}       
+		});
 
 
-    function handleSuccess(data: IDataAccontValidSchema){
-    	if(data.password !== data.passwordConfirmation){
-    		return;
-    	}
-    	setUserRegister({...userRegister, ...data});
-    	goToNext();
-    }
-	
-    return (<FormAccontContainer onSubmit={handleSubmit(handleSuccess)}>
-    	<Input placeholder='Username' size='sm' isRequired={true} 
-    		{...register("username")}
-			helperText={errors.username && errors.username.message ? errors.username.message : ""}
-    	/>
-    	<Input placeholder='Email' size='sm' isRequired={true}
-    		{...register("email")}
-			helperText={errors.email && errors.email.message ? errors.email.message : ""}
-    	/>
-    	<Input placeholder='Senha' size='sm' type="password" isRequired={true}
-    		{...register("password")}
-			helperText={errors.password && errors.password.message ? errors.password.message : ""}
-    	/>
-    	<Input placeholder='Confirmar Senha' size='sm' type="password" isRequired={true}
-    		{...register("passwordConfirmation")}
-			helperText={errors.passwordConfirmation && errors.passwordConfirmation.message ? errors.passwordConfirmation.message : ""}
-    	/>
-    	<ButtonRadius variantSize="large" title="Proximo" typeButton="submit"/>
-    </FormAccontContainer>);
+		function handleSuccess(data: IDataAccontValidSchema){
+			if(data.password !== data.passwordConfirmation){
+				return;
+			}
+			setUserRegister({...userRegister, ...data});
+			goToNext();
+		}
+		
+		return (<FormAccontContainer onSubmit={handleSubmit(handleSuccess)}>
+			<FormControl isInvalid={Boolean(errors.username)}>
+				<Input placeholder='Username' size='sm' isRequired={true} 
+					{...register("username")}
+				/>
+				{
+					errors.username && errors.username.message && 
+					<FormErrorMessage>
+						{errors.username.message}
+					</FormErrorMessage>
+				}
+			</FormControl>
+				
+			<FormControl isInvalid={Boolean(errors.email)}>
+				<Input placeholder='Email' size='sm' isRequired={true}
+					{...register("email")}
+				/>
+				{
+					errors.email && errors.email.message && 
+				<FormErrorMessage>
+					{errors.email.message}
+				</FormErrorMessage>
+				}
+			</FormControl>
+
+			<FormControl isInvalid={Boolean(errors.password)}>
+				<Input placeholder='Senha' size='sm' type="password" isRequired={true}
+					{...register("password")}
+				/>
+				{
+					errors.password && errors.password.message && 
+					<FormErrorMessage>
+						{errors.password.message}
+					</FormErrorMessage>
+				}
+			</FormControl>
+
+			<FormControl isInvalid={Boolean(errors.passwordConfirmation)}>
+				<Input placeholder='Confirmar Senha' size='sm' type="password" isRequired={true}
+					{...register("passwordConfirmation")}
+				/>
+				{
+					errors.passwordConfirmation && errors.passwordConfirmation.message && 
+					<FormErrorMessage>
+						{errors.passwordConfirmation.message}
+					</FormErrorMessage>
+				}
+			</FormControl>
+			<ButtonRadius variantSize="large" title="Proximo" typeButton="submit"/>
+		</FormAccontContainer>);
 }
