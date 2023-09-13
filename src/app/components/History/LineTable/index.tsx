@@ -27,10 +27,10 @@ export function LineTable({ data }: PropsLineTable){
 				</Stack>
 
 				<Stack direction="column" gap={1}> 
-					<Typography sx={{ fontSize:"1.125rem", fontWeight:700}}>
+					<Typography sx={{ fontSize:"1.125rem", fontWeight:700, color:"#132D46"}}>
 						{description}
 					</Typography>
-					<Typography>
+					<Typography sx={{color:"#132D46"}}>
 						{date}
 					</Typography>
 				</Stack>
@@ -38,8 +38,8 @@ export function LineTable({ data }: PropsLineTable){
 		</TableCell>
 		<TableCell align="right" component="th" scope="row" sx={{border: "none"}}>
 			<Stack direction="row" justifyContent="flex-end" sx={{height:"3.5rem"}} alignItems='flex-end'>
-				<Typography  sx={{ fontSize:"1.125rem", fontWeight:600}}>
-              R$ {value.toFixed(2).replace(".", ",")}
+				<Typography  sx={{ fontSize:"1.000rem", fontWeight:600, color:"#132D46"}}>
+              		R${value.toFixed(2).replace(".", ",")}
 				</Typography>
 			</Stack>
 		</TableCell>
