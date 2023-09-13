@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { styled } from "styled-components";
 
 // className="flex  mtb-[15rem] gap-[15rem] bg-opacity-50 h-96"
@@ -28,7 +28,7 @@ export const FooterContainer =  styled.footer`
         font-weight: 600;
         line-height: normal;
     }
-`
+`;
 
 export const NetworkContainer = styled.div`
     display: flex;
@@ -39,4 +39,4 @@ export const NetworkContainer = styled.div`
     width: 3rem;
     border-radius: 50%;
     background-color: ${props => props.theme.colors.pink[50]};
-`
+`;

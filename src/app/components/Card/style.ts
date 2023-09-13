@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { styled } from "styled-components";
 
 export const CardContainer = styled.div`
@@ -42,4 +42,4 @@ export const CardContainer = styled.div`
             color: ${props => props.theme.colors.black[50]};
         }
     }
-`
+`;

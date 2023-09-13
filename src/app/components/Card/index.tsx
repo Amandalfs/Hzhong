@@ -1,5 +1,5 @@
-import {CardContainer} from "./style"
-import Image from 'next/image';
+import {CardContainer} from "./style";
+import Image from "next/image";
 
 
 interface ICard {
@@ -8,10 +8,10 @@ interface ICard {
 }
 
 export function Card({imgUrl, title}: ICard){  
-    return(<CardContainer>
-        <Image className="Image" src={imgUrl} alt="" />
-        <p>
-            {title}
-        </p>
-    </CardContainer>)
+	return(<CardContainer>
+		<Image className="Image" src={imgUrl} alt="" />
+		<p>
+			{title}
+		</p>
+	</CardContainer>);
 }

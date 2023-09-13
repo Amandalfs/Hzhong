@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import { styled } from "styled-components";
@@ -18,7 +18,7 @@ export const  CardMenuContainer = styled.nav`
     background: ${props => props.theme.colors.purple[50]};
     box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.10);
     gap: 0.5rem;
-`
+`;
 
 export const LinkMenu = styled(Link)`
         color: #000;
@@ -31,4 +31,4 @@ export const LinkMenu = styled(Link)`
         &:hover {
             color: ${props => props.theme.colors.purple[900]};
         }
-`
+`;
