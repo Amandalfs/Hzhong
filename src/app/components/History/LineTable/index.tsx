@@ -3,6 +3,8 @@ import TableCell from "@mui/material/TableCell";
 import Stack from "@mui/material/Stack";
 import PaidIcon from "@mui/icons-material/Paid";
 import Typography from "@mui/material/Typography";
+import { format } from "date-fns";
+import { ptBR } from "date-fns/locale";
 
 interface IDataHistory {
   description: string
@@ -31,7 +33,7 @@ export function LineTable({ data }: PropsLineTable){
 						{description}
 					</Typography>
 					<Typography sx={{color:"#132D46"}}>
-						{date}
+						{format(new Date(date), "dd 'de' MMMM, yyyy 'às' HH:mm", { locale: ptBR })}
 					</Typography>
 				</Stack>
 			</Stack>
