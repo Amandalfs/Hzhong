@@ -1,4 +1,5 @@
 import { apiHzhong } from "@/app/services/api";
+import { toast } from "react-toastify";
 
 interface IManagerKeys{
     createKey(token: string): void,
@@ -13,8 +14,9 @@ export function useManagerKeys(): IManagerKeys {
 					Authorization: `Bearer ${token}`
 				}
 			});
+			return toast.success("Chave pix criada");
 		} catch (error) {
-			console.log(error);
+			return toast.error(error.response.data.msg);
 		}
 	}
     
@@ -25,8 +27,9 @@ export function useManagerKeys(): IManagerKeys {
 					Authorization: `Bearer ${token}`
 				}
 			});
+			return toast.success("Chave pix excluida");
 		} catch (error) {
-			console.log(error);
+			return toast.error(error.response.data.msg);
 		}
 	}
 

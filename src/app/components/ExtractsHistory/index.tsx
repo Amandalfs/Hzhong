@@ -14,6 +14,8 @@ import {
 import Pagination from "@mui/material/Pagination";
 import { useContext, useEffect, useState } from "react";
 import { TypeTransactions } from "../TypeTransactions";
+import { format } from "date-fns";
+import { ptBR } from "date-fns/locale";
 
 export function ExtractsHistory(){
 	const [page, setPage] = useState(1);
@@ -87,7 +89,7 @@ export function ExtractsHistory(){
 										</TypeTransactions>
 									</td>
 									<td className="text-center">R$ {extract.saldo}</td>
-									<td className="text-center">{extract.data}</td>
+									<td className="text-center">{format(new Date(extract.data), "dd 'de' MMMM,'às' HH:mm", { locale: ptBR })}</td>
 								</Tr>);
 							})
 						}    
