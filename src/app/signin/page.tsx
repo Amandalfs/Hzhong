@@ -7,13 +7,13 @@ import * as zod from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Input } from "@chakra-ui/react";
-import axios from "axios";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useCookies } from "../hooks/cookiesHook";
 import { CookiesContext } from "@/contexts/cookiesContext";
 
 import { ToastContainer, toast } from "react-toastify";
+import { useSessions } from "../hooks/sessionsUser/useSessions";
 
 function SignIn(){
 	const router = useRouter();
@@ -37,20 +37,12 @@ function SignIn(){
     	}       
     });
 
-    async function handleLogin({password, username}: IDataLoginValidSchema){
-    	try {
-    		await axios.post("/api/auth", {
-    			username,
-    			password
-    		}); 
-    		getCookie("token");
-    		router.push("/dashboard");
+    const { sessionsUser } = useSessions();
 
-    	} catch (error) {
-    		if(error.response.data.error.msg){
-    			return toast.error(error.response.data.error.msg);
-    		}
-    		toast.error("Internal Server Error");
+    async function handleLogin({password, username}: IDataLoginValidSchema){
+    	const token = sessionsUser(username, password);
+    	if(token){
+    		router.push("/dashboard");
     	}
     }
 	
